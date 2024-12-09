@@ -1,0 +1,36 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   CADENAS DE BÚSQUEDA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Cadenas de búsqueda} \label{section:es/cadena_busqueda}
+
+
+Se realizó una búsqueda automática en las bibliotecas digitales de ACM, IEEE Xplore, PubMed y Springer.
+
+% For the construction of the search string, the main terms “explainable artificial intelligence”, “histopathology”, “histology” and “anatomic pathology” were considered, including their alternative terms. The resulting search string is presented in Figure \ref{figura:en/cadena_generica}.
+Para la confección de la cadena de búsqueda se utilizaron los términos principales \enquote{explainable artificial intelligence}, \enquote{histopathology}, \enquote{histology} y \enquote{anatomic pathology}, incluyendo sus variantes y sinónimos. La cadena de búsqueda resultante se presenta en la Figura \ref{figura:es/cadena_generica}.
+
+\begin{figure}[thp] % the figure provides the caption
+\centering          % which should be centered
+\begin{tabular}{c}  % the tabular makes the listing as small as possible and centers it
+\begin{lstlisting}
+#FULL TEXT
+  "xai" OR
+  "explainable artificial intelligence" OR
+  "explainable ai" OR
+  "interpretable ai" OR
+  "interpretable artificial intelligence" OR
+  "white box" OR
+  "human ai"
+#AND
+#FULL TEXT
+  "histopathology" OR
+  "histopathological" OR
+  "histology" OR
+  "histological" OR
+  "anatomic pathology" OR
+  "anatomical pathology"
+\end{lstlisting}
+\end{tabular}
+\caption{Cadena de búsqueda genérica.}
+\label{figura:es/cadena_generica}
+\end{figure}

@@ -1,0 +1,290 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                      %%
+%%        ARTICULO CON FORMATO GENÈRICO DE ARTÌCULO     %%
+%%                                                      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                      %%
+%%   Si hace falta otro formato, generar otro archivo   %%
+%%  main_format.tex y compilar ese archivo.             %%
+%%                                                      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[hidelinks,12pt,twoside]{article}
+%\documentclass[hidelinks,12pt,oneside]{article}
+
+%%%%%%% DEPENDENCIAS %%%%%%%
+\usepackage{svg}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+%\usepackage{orcidlink}
+\usepackage{hyperref}
+%\usepackage{graphicx}
+\usepackage{xurl}
+%\usepackage{breakurl}
+%\def\UrlBreaks{\do\/\do-}
+
+% Para que las secciones siempre empiecen en la hoja par
+\let\oldsection\section
+\def\section{\clearevenpage\oldsection}
+
+\makeatletter
+\def\clearevenpage{\clearpage\if@twoside \ifodd\c@page
+    \hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+% Separación de párrafos
+\usepackage[skip=10pt plus1pt, indent=16pt]{parskip}
+
+% Encoding
+\usepackage[latin1,utf8]{inputenc}
+
+%%%%%%
+%%   BIBLIOGRAFÍA
+%%%%%%
+\usepackage[style=ieee]{biblatex} %Imports biblatex package
+\addbibresource{referencias.bib} %Import the bibliography file
+\usepackage{url}
+\appto{\bibsetup}{\sloppy}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+% Red: https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
+
+% Spanish-specific commands
+% Esto ajusta el texto de las \label a idioma español
+\usepackage[spanish, mexico]{babel}
+\usepackage{csquotes}
+
+% ESTO LO PUSE PARA PROBAR
+%\usepackage{caption}
+%\captionsetup{font=scriptsize} % This will fix captions being resized
+
+%%%%%%
+%%   LISTADO DE CADENAS DE BÚSQUEDA
+%%%%%%
+\usepackage{listings} %Esto para las cadenas de búsqueda
+% Ref: https://www.overleaf.com/learn/latex/Code_listing#Reference_guide
+%\definecolor{codegreen}{rgb}{0,0.6,0}
+%\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+%\definecolor{codepurple}{rgb}{0.58,0,0.82}
+%\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{cadena_busqueda_style}{
+    %backgroundcolor=\color{backcolour},   
+    %commentstyle=\color{codegreen},
+    %keywordstyle=\color{magenta},
+    %numberstyle=\tiny\color{codegray},
+    %stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    %numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=cadena_busqueda_style}
+% TODO: Ver cómo centrar los listings
+% Ref: https://tex.stackexchange.com/questions/5818/how-to-center-a-listing
+
+
+%%%%%%
+%%  PARA EL FORMATO DE LAS TABLAS
+% Ref: https://www.overleaf.com/learn/latex/Tables#Introduction
+%%%%%%
+\usepackage{array}
+\usepackage{longtable}
+\makeatletter
+\newbox\LT@firstfoot
+\def\endfirstfoot{\LT@end@hd@ft\LT@firstfoot}
+\newdimen\LT@footdiff
+\def\LT@start{%
+  \let\LT@start\endgraf
+  \endgraf\penalty\z@
+  \vskip\LTpre\endgraf
+  \LT@footdiff-\ht\LT@foot
+  \advance\LT@footdiff\ht\LT@firstfoot
+  \dimen@\pagetotal
+  \advance\dimen@ \ht\ifvoid\LT@firsthead\LT@head\else\LT@firsthead\fi
+  \advance\dimen@ \dp\ifvoid\LT@firsthead\LT@head\else\LT@firsthead\fi
+  \advance\dimen@ \ht\ifvoid\LT@firstfoot\LT@foot\else\LT@firstfoot\fi
+  \dimen@ii\vfuzz
+  \vfuzz\maxdimen
+  \setbox\tw@\copy\z@
+  \setbox\tw@\vsplit\tw@ to \ht\@arstrutbox
+  \setbox\tw@\vbox{\unvbox\tw@}%
+  \vfuzz\dimen@ii
+  \advance\dimen@ \ht
+      \ifdim\ht\@arstrutbox>\ht\tw@\@arstrutbox\else\tw@\fi
+  \advance\dimen@\dp
+      \ifdim\dp\@arstrutbox>\dp\tw@\@arstrutbox\else\tw@\fi
+  \advance\dimen@ -\pagegoal
+  \ifdim \dimen@>\z@\vfil\break\fi
+  \global\@colroom\@colht
+  \ifvoid\LT@firstfoot
+    \ifvoid\LT@foot
+    \else
+      \advance\vsize-\ht\LT@foot
+      \global\advance\@colroom-\ht\LT@foot
+      \dimen@\pagegoal\advance\dimen@-\ht\LT@foot\pagegoal\dimen@
+      \maxdepth\z@
+    \fi
+  \else
+    \advance\vsize-\ht\LT@firstfoot
+    \global\advance\@colroom-\ht\LT@firstfoot
+    \dimen@\pagegoal\advance\dimen@-\ht\LT@firstfoot\pagegoal\dimen@
+    \maxdepth\z@
+  \fi
+  \ifvoid\LT@firsthead\copy\LT@head\else\box\LT@firsthead\fi\nobreak
+  \output{\LT@output}%
+}
+\def\LT@output{%
+  \ifnum\outputpenalty <-\@Mi
+    \ifnum\outputpenalty > -\LT@end@pen
+      \LT@err{floats and marginpars not allowed in a longtable}\@ehc
+    \else
+      \setbox\z@\vbox{\unvbox\@cclv}%
+      \ifdim \ht\LT@lastfoot>\ht\LT@foot
+        \dimen@\pagegoal
+        \advance\dimen@-\ht\LT@lastfoot
+        \ifdim\dimen@<\ht\z@
+          \setbox\@cclv\vbox{\unvbox\z@\copy\LT@foot\vss}%
+          \@makecol
+          \@outputpage
+          \setbox\z@\vbox{\box\LT@head}%
+        \fi
+      \fi  
+      \global\@colroom\@colht
+      \global\vsize\@colht   
+      \vbox
+        {%
+          \unvbox\z@
+          \box
+            \ifvoid\LT@lastfoot
+              \ifvoid\LT@firstfoot
+                \LT@foot
+              \else
+                \LT@firstfoot
+              \fi
+            \else
+              \LT@lastfoot
+            \fi
+        }%
+    \fi
+  \else
+    \ifvoid\LT@firstfoot
+      \setbox\@cclv\vbox{\unvbox\@cclv\copy\LT@foot\vss}%
+      \@makecol
+      \@outputpage
+      \global\vsize\@colroom
+    \else
+      \setbox\@cclv\vbox{\unvbox\@cclv\box\LT@firstfoot\vss}%
+      \@makecol
+      \@outputpage
+      \global\advance\@colroom\LT@footdiff
+      \global\vsize\@colroom
+    \fi
+    \copy\LT@head\nobreak
+  \fi
+}
+\makeatother
+\usepackage{tabularx}
+    \newcolumntype{L}{>{\raggedright\arraybackslash}m}
+    %\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+    \newcolumntype{M}{>{\centering\arraybackslash}m}
+    \newcolumntype{C}{>{\centering\arraybackslash}p}
+
+%%%%%% COMANDO PARA COMENTAR BLOQUES DE CÒDIGO %%%%%%
+\newcommand{\commentcode}[1]{}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   FORMATO DEL DOCUMENTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RO,LE]{Inteligencia artificial explicable en Histopatología: revisión sistemática}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,RE]{Ing. Miguel, Juan Cristian Daniel}
+
+%\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage[nottoc,numbib]{tocbibind}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   INICIO DEL DOCUMENTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%% CARATULA
+\input{Secciones/es/00_v2_Carátula}
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   INCLUSIÓN DE CONTENIDO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referencia: \input vs \include
+% https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include
+%\input{Secciones/es/00_Agradecimientos}
+\input{Secciones/es/01_v2_Introducción}
+\newpage
+\input{Secciones/es/02_Contexto_preliminar}
+  \input{Secciones/es/02-1_Nociones_IA}
+  \input{Secciones/es/02-2_Nociones_XAI}
+  \input{Secciones/es/02-3_Taxonomia_XAI}
+  \input{Secciones/es/02-4_Usos_IA_medicina}
+  \input{Secciones/es/02-5_Lineamientos_TFE}
+  %\input{Secciones/es/02-6_Glosario_Complementario}
+\newpage
+\input{Secciones/es/03_Protocolo_mapeo}
+  \input{Secciones/es/03-1_Preguntas_investigación}
+  \input{Secciones/es/03-2_v2_Cadenas_busqueda}
+  \input{Secciones/es/03-3_Criterios_inc_exc}
+  \input{Secciones/es/03-4_Calidad}
+  \input{Secciones/es/03-5_Proceso_selección}
+\newpage
+\input{Secciones/es/04_Análisis_resultados}
+  \input{Secciones/es/04-0-Resultados}
+  \input{Secciones/es/04-1_PI1}
+    \input{Secciones/es/04-1-1_Técnicas}
+    \input{Secciones/es/04-1-2_Transparencia}
+    \input{Secciones/es/04-1-3-Workflow}
+    \input{Secciones/es/04-1-4-Costos}
+    \input{Secciones/es/04-1-5-Regulaciones}
+  \input{Secciones/es/04-2_PI2}
+  \input{Secciones/es/04-3_PI3}
+  \input{Secciones/es/04-4_PI4}
+  \input{Secciones/es/04-5_v2_PI5.tex}
+  %\input{Secciones/es/04-6_PI6}
+\newpage
+\input{Secciones/es/05_Conclusiones}
+\newpage
+\input{Secciones/es/06_Apéndices}
+  \input{Secciones/es/06-1_Glosario.tex}
+  \input{Secciones/es/06-2_PRISMA_checklist.tex}
+  \input{Secciones/es/06-3_Datos_PI2.tex}
+  \input{Secciones/es/06-4_Datos_PI3.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   REFERENCIAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\printbibliography[heading=bibintoc, title={Referencias}]
+
+\end{document}

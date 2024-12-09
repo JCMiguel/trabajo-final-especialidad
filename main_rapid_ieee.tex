@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                      %%
+%%             ARTICULO CON FORMATO IEEE                %%
+%%                                                      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                      %%
+%%   Si hace falta otro formato, generar otro archivo   %%
+%%  main_format.tex y compilar ese archivo.             %%
+%%                                                      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[hidelinks, conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+%\usepackage{cite}
+
+%%%%%%% DEPENDENCIAS %%%%%%%
+\usepackage{svg}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{orcidlink}
+\usepackage{hyperref} %<--- Load after everything else
+
+
+%%%%%% BIBLATEX %%%%%%
+\usepackage[style=ieee]{biblatex} %Imports biblatex package
+\addbibresource{referencias.bib} %Import the bibliography file
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+%%%%%% FORMATO - LISTADO DE CADENAS DE BÚSQUEDA %%%%%%
+\usepackage{listings}
+\lstdefinestyle{cadena_busqueda_style}{
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=cadena_busqueda_style}
+
+%%%%%%% Ajustes de separación de sílabas %%%%%%%
+\pretolerance=2000
+\tolerance=3000
+%\hyphenation{his-to-lo-gy}
+%\hyphenation{his-to-pa-tho-lo-gy}
+%\hyphenation{re-po-si-to-ry}
+%\hyphenation{re-po-si-to-ries}
+
+%%%%%% PARA EL FORMATO DE LAS TABLAS %%%%%%
+\usepackage{longtable}
+\usepackage{tabularx}
+    \newcolumntype{L}{>{\raggedright\arraybackslash}m}
+    %\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+    \newcolumntype{M}{>{\centering\arraybackslash}m}
+    \newcolumntype{C}{>{\centering\arraybackslash}p}
+
+\usepackage{array,booktabs,caption,siunitx}
+
+%%%%%% COMANDO PARA COMENTAR BLOQUES DE CÒDIGO %%%%%%
+\newcommand{\commentcode}[1]{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   TÍTULO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Requirements and Challenges to use Explainable Artificial Intelligence in Histopathology: A Rapid Review}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   AUTORES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% $^{\textsuperscript{\orcidicon{0000-0001-7749-5214}}}$
+
+\author{
+    \IEEEauthorblockN{
+        Juan Cristian Miguel \orcidlink{0000-0001-7749-5214}\IEEEauthorrefmark{1},
+        Christian Grévisse \orcidlink{0000-0002-9585-1160}\IEEEauthorrefmark{4},
+        Antonia Sardella \IEEEauthorrefmark{4},
+        Maria F Pollo-Cattaneo \orcidlink{0000-0003-4197-3880}\IEEEauthorrefmark{1}
+    }
+    \IEEEauthorblockA{\IEEEauthorrefmark{1}\textit{Facultad Regional Buenos Aires}\\\textit{Universidad Tecnológica Nacional}\\Buenos Aires, Argentina\\\{jmiguel, fpollo\}@frba.utn.edu.ar}
+    \IEEEauthorblockA{\IEEEauthorrefmark{4}\textit{Faculty of Science, Technology and Medicine}\\\textit{University of Luxembourg}\\Esch-sur-Alzette, Luxembourg\\christian.grevisse@uni.lu, antonia.sardella@ext.uni.lu}
+}
+
+
+\begin{document}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   INCLUSIÓN DE CONTENIDO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Secciones/en/00_Abstract}
+\input{Secciones/en/01_Introduction}
+%\input{Secciones/en/02_Background}
+%\input{Secciones/en/03_v2_Rapid Review}  %% Version 1
+\input{Secciones/en/03_v2_Rapid Review}   %% Version 2
+\input{Secciones/en/04_Results}
+\input{Secciones/en/04-1_Technical Difficulties}
+\input{Secciones/en/04-2_Transparency}
+\input{Secciones/en/04-3_Workflow}
+\input{Secciones/en/04-4_Costs}
+\input{Secciones/en/04-5_Regulations}
+\input{Secciones/en/05_Conclusions}
+\input{Secciones/en/06_Appendix}          %% Version 2
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   REFERENCIAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography[title={References}]
+%\begin{thebibliography}{00}
+
+
+\end{document}

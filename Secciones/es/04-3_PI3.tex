@@ -1,0 +1,27 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   PI3 - ANÁLISIS DE RESULTADOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{PI3 - ¿Cuáles son los algoritmos utilizados en implementaciones de IA/IAX?} \label{section:es/resultados-pi3}
+
+Para dar respuesta a esta pregunta de investigación se extrajeron los algoritmos, técnicas y herramientas mencionados en cada uno de los estudios primarios. Con estos datos, se confeccionaron sendos histogramas para reflejar la frecuencia de uso de cada método, los cuales se visualizan en las Figuras \ref{figura:es/rpi3_ai} y \ref{figura:es/rpi3_xai}. Los datos que se utilizaron en la confección de estos gráficos se adjuntan en el Apéndice \ref{appendix:es/rpi3_datos}.
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=\textwidth]{Imagenes/rpi3_ai.png}}
+\caption{Histograma de uso de algoritmos de inteligencia artificial y marcos de trabajo reportados. En el eje de abscisas, las siglas se corresponden con las nomenclaturas en inglés, a saber: Convolutional Neural Network (CNN); Dense Convolutional Network (DenseNet); Extreme Inception (Xception); Feature Pyramid Network (FPN); Generative Adversarial Networks (GANs); Graph Neural Network (GNN); Inductive Logic Programming (ILP); Region-based Convolutional Neural Network (R-CNN); Residual Neural Network (ResNet); SegNet; Squeeze-and-Excitation network; y Visual Geometry Group network (VGG).}
+\label{figura:es/rpi3_ai}
+\end{figure}
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=\textwidth]{Imagenes/rpi3_xai.png}}
+\caption{Histograma de uso de algoritmos y técnicas de explicabilidad de inteligencia artificial.}
+\label{figura:es/rpi3_xai}
+\end{figure}
+
+Se observa en la Figura \ref{figura:es/rpi3_ai} una tendencia destacable a utilizar redes neuronales convolucionales. Esto puede deberse a su buen desempeño en el análisis de imágenes, superior al 90\% de exactitud en las predicciones. Dada la naturaleza de caja negra de estas redes, que dificulta su aplicabilidad en el ámbito médico, se observan otros tipos de propuestas, como por ejemplo el uso de técnicas de lógica difusa. En particular, Sabol et al. \cite{Sabol2020} observan que X-CFCMC, del inglés eXplainable Cumulative Fuzzy Class Membership Criterion, permite obtener sistemas más transparentes y confiables en sus predicciones, conclusión obtenida a partir de contrastar su desempeño contra una CNN convencional y consultar con patólogos de edades variadas.
+
+% cuya arquitectura se compone de una ResNet, un FPN y dos subredes FCN.
+Otro hecho interesante radica en la cantidad de frameworks o sistemas propuestos en los estudios primarios. Se destacan entre ellos RetinaNet \cite{Lee2024}, Brea-Net \cite{Liang&Meng2023}, GLoRIA y ChatCAD \cite{PahuddeMortanges2024}, MesoNet \cite{Tran2021}, UV-Net \cite{Dy2024}, CELNet y CLAM \cite{Mohammadi2022} y SpRAy \cite{Sauter2022}. Esta tendencia indica que el uso de soluciones mixtas y la integración de múltiples agentes de inteligencia artificial presentan un desempeño favorable.
+
+En términos de técnicas de explicabilidad, la Figura \ref{figura:es/rpi3_xai} demuestra que las más populares son LIME, SHAP y CAM, en sus múltiples variaciones. Se observa también un interés notable por los algoritmos de explicabilidad en redes neuronales gráficas, pese al uso reducido reportado en la Figura \ref{figura:es/rpi3_ai}. Se destaca GraphLIME como un caso particular de LIME aplicado a este tipo de redes.
+
+La media del histograma de la Figura \ref{figura:es/rpi3_xai} demuestra un claro interés por aumentar la explicabilidad de la inteligencia artificial. Sin embargo, la explicabilidad concebida a partir de la interpretación de sesgos se ha explorado menos en relación con las demás perspectivas. A este respecto, Sauter et al. \cite{Sauter2022} destacan los métodos InsideBias y REvealing VIsual biaSEs (REVISE).

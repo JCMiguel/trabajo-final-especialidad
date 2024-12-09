@@ -1,0 +1,26 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   INTRODUCCIÓN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducción}
+
+% Acá tengo que hablar del tema XAI, mencionar brevemente la problemática actual y plantear mis objetivos para este artículo. Es decir, mencionar que voy a hacer un mapeo y tal.
+% Esta secciòn es importante para indicar lo que va a contener el artículo, así que tengo que ser breve, pero sin ser redundante con lo que voy a comentar en la sección de estado del arte.
+
+% TODO: Revisar y redactar mejor esta introducción
+% Para redactar esta sección, puedo inspirarme un poco en estos artículos:
+% 6-Tosun-xAI Anatomic Pathology.pdf
+
+
+La mayoría de los algoritmos de inteligencia artificial (AI) se basan en un modelo de caja negra, esto significa que no es sencillo entender por qué el algoritmo obtiene una determinada predicción para un conjunto de datos de entrada. En términos generales, puede decirse que cuanto más complejo es el modelo de AI, es más difícil para un usuario interpretarlo. Esto se evidencia cuando se comparan algoritmos como árbol de decisiones y redes neuronales. En contraposición a los modelos de caja negra se encuentran los de caja blanca, que pretenden garantizar un entendimiento claro y directo del proceso \cite{Ye2021}.
+
+Los modelos AI de caja negra pueden proveer muy buenos resultados en la predicción que otorgan. Sin embargo, aplicados en el ámbito médico, la falta de transparencia del proceso provoca que el personal de salud no tenga la confianza suficiente en los resultados obtenidos. Por otro lado, estos profesionales suelen estar abrumados por la cantidad de datos e información de sus pacientes y otras tareas asociadas. Por lo tanto, es preciso acompañar el resultado del algoritmo con explicaciones adecuadas que sean comprensibles  y fácilmente aplicables al dominio en cuestión \cite{wip}.
+
+La Inteligencia Artificial Explicable, de ahora en más XAI por Explainable Artificial Intelligence, es una colección de procesos y métodos que permiten a los usuarios comprender y confiar en los resultados de los algoritmos de inteligencia artificial (AI) o machine learning (ML) \cite{wip}. Las técnicas de XAI pretenden mejorar la transparencia de los modelos de AI, una característica de vital importancia en el campo de la medicina, dado que permite una mayor evidencia cualitativa de las predicciones elaboradas por el algoritmo \cite{wip}
+
+Existen varios tipos de XAI, en función de cómo obtienen una explicación del modelo y cómo se la muestra al usuario. Así, mientras que algunos métodos son agnósticos, lo que significa que podrían aplicarse a cualquier modelo de AI, otros son específicos de ciertos modelos.
+
+Respecto a la forma de obtener la explicación, podemos identificar las soluciones basadas en gradiente, basadas en perturbaciones externas, entre otras. La imagen siguiente es un extracto de \cite{wip} que muestra una línea de tiempo de algunos los métodos XAI existentes hasta la fecha y cuándo se postularon.
+
+Los algoritmos XAI propuestos hasta la actualidad no son suficientes para la implementación de AI en la práctica médica. Algunos investigadores sugieren que la forma de analizar el comportamiento de un algoritmo de AI no consiste en buscar explicaciones a sus predicciones, sino en determinar la presencia de sesgos al obtenerlas [3]. Por otro lado, existe además un debate reciente acerca del uso de modelos XAI post-hoc (caja negra) frente a los ante-hoc. Esto se debe a que las explicaciones obtenidas a partir de una caja negra no se corresponden con la forma real en que el modelo de AI predice sus resultados, aspecto que genera cierto escepticismo para incorporar estas tecnologías en escenarios donde la toma de decisiones es crítica [3]. Algunos autores también declaran que los médicos y clínicos buscan relacionarse con el sistema como si lo hicieran con un colega, pedir su punto de vista médica, cuáles son sus experiencias y debilidades, y cómo complementar sus habilidades \cite{wip}.
+
+Para atender a esta situación, en este artículo se realiza una revisión sistemática de la literatura vigente y obtener información del panorama actual de las investigaciones relacionadas a XAI en el ámbito de la histología y la histopatología. Se preguntas de investigación orientadas a la visión arquitectónica del software y limitaciones de las tecnología XAI en estas disciplinas. El resultado de este mapeo permitirá direccionar una segunda etapa de la investigación en la que se atenderá una problemática puntual y más específica.

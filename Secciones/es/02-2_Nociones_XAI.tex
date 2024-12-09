@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   NOCIONES DE INTELIGENCIA ARTIFICIAL EXPLICABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Nociones de inteligencia artificial explicable} \label{section:es/nociones-xai}
+
+%- Nociones de xAI
+%	- Nomenclatura habitual (interpretability, trustworthy, explainability, causality, etc.)
+
+
+La inteligencia artificial explicable, o IAX, es una colección de procesos, técnicas y métodos que permiten a los usuarios comprender y confiar en los resultados de los algoritmos de inteligencia artificial \cite{Giuste2023}. Las técnicas de IAX pretenden mejorar la transparencia de los modelos de IA, una característica de vital importancia en el campo de la medicina, dado que permite una mayor evidencia cualitativa de las predicciones elaboradas por el algoritmo.
+
+El término \enquote{inteligencia artificial explicable} fue introducido por primera vez en el año 2004 \cite{Patricio2023}. Ocasionalmente también se le ha referido como \enquote{inteligencia artificial interpretable} o \enquote{inteligencia artificial de caja blanca}. Tras estos primeros acercamientos, continuaron años de profundo crecimiento en temas afines a big data, análisis de datos (data analytics), aprendizaje automático y aprendizaje profundo, que ocasionaron que en el año 2015 se planteara la necesidad del programa Explainable AI, impulsado por la Defense Advanced Research Projects Agency (DARPA). Este programa, de 48 meses de duración, comenzó efectivamente en el año 2017 y buscó garantizar a los usuarios un mejor entendimiento de las decisiones de los sistemas de inteligencia artificial \cite{Gunning2021}. Desde entonces, diversos autores se han esforzado por intentar estandarizar los fundamentos IAX.
+
+Con el paso del tiempo se introdujo nomenclatura clave para caracterizar ciertas características de las técnicas IAX. Algunos de estos conceptos se utilizan a menudo en forma intercambiable, como si de sinónimos se tratase. Un ejemplo de esto son los calificativos \enquote{explicable}, \enquote{interpretable} y \enquote{transparente}. Esta situación es alarmante dado que no existe un contexto uniforme acerca de qué terminología utilizar. Graziani et al. analizan esta situación y demuestran las múltiples acepciones que tiene cada término en ámbitos distintos y hasta complementarios \cite{Graziani2022}. Dado este problema de definición según el dominio, algunos autores prefieren diferenciar el vocabulario. La Tabla \ref{tabla:es/terminos_xai} reúne algunos de los términos frecuentes en temas afines a IAX, traducidos al español. Los conceptos y sus definiciones fueron extraídos de la revisión sistemática de Salih et al. \cite{Salih2024}, el análisis de causabilidad de Holzinger y Müller \cite{Holzinger2021} y el estudio de Leventi-Peetz y Östreich acerca de la reproducibilidad en el aprendizaje automático \cite{LeventiPeetz2022}. En dicha tabla, la palabra \enquote{sistema} se refiere específicamente a sistemas de IA o de IAX. Se seleccionaron las palabras más aproximadas según el contexto para traducir los términos en inglés.
+
+{
+\begin{table}[ht!]
+\scriptsize
+\centering
+\begin{tabular}{|| m{7.5em} | m{7.5em} | m{25em} ||} 
+ \hline
+  \textbf{Término propuesto en español} & \textbf{Término original en inglés} & \textbf{Definición} \\ [0.5ex] 
+  \hline \hline
+Explicabilidad & Explainability
+ & Se refiere a la habilidad de comprender el comportamiento y la composición interna de un sistema, y poder explicar por qué realiza una determinada acción.
+ % & Refer to the ability of understanding the internal mechanism and the behavior of a system and to explain why a specifc action was made (Salih et al. 2023b)
+ \\ \hline
+Interpretabilidad & Interpretability
+ & Refleja cuán comprensible es la salida de un modelo o sistema, concebida desde una perspectiva humana.
+ % & Reflects the extent to which degree that the model’s output is understandable from human prospective (Salih et al. 2023b)
+ \\ \hline
+Transparencia & Transparency
+ & La cualidad de un modelo de ser intrínsecamente comprensible. Es la característica intrínseca a los modelos de caja blanca, y opuesta a los de caja negra.
+ % & Opposite to black box and has the potential to be understandable by itself (Linardatos et al. 2020)
+ \\ \hline
+Transferibilidad & Transferability
+ & Comprender un sistema de manera tal que pueda ser extendido o transferido a otro dominio o problema.
+ % & Understanding an AI system in a way can be extended or transferred into another domain and problem (Arrieta et al. 2020)
+ \\ \hline
+Confiabilidad & Trustworthy
+ & Característica que implica que un sistema sea transparente, seguro y confiable al mismo tiempo.
+ % & That the system is transparent, safe and the output can be trusted (Arrieta et al. 2020)
+ \\ \hline
+Fidelidad & Fidelity
+ & Grado de exactitud en que la explicación representa o captura el funcionamiento del sistema.
+ % & To what extend does the explanation represent and capture the workings of the AI system? (Lopes et al. 2022)
+ \\ \hline
+Imparcialidad & Fairness
+ & Implica que el sistema no exhiba prejuicios en contra de un grupo de individuos, en función de características inherentes a ellos.
+ % & The AI system’s decisions do not exhibit prejudice against any group or individual based on inherent characteristics (Linardatos et al. 2020)
+ \\ \hline
+Responsabilidad & Accountability
+ & Se refiere al aseguramiento de que un sistema es confiable y que funciona tal y como se lo expone.
+ % & The assurance that the AI system can be trusted and works as was presented (Novelli et al. 2023)
+ \\ \hline
+Causalidad & Causality
+ & Se define como la relación entre algo que sucede y la causa que lo genera \cite{defCausalityOxford}. Se la define también como la ley en virtud de la cual se producen efectos \cite{defCausalidadRAE}.
+ % & Relying solely on statistical correlations can be very dangerous, especially in medicine, because correlation must not be confused with causality, which is completely missing in current AI.
+ \\ \hline
+Causabilidad & Causability
+ & Medida del grado en que la explicación de una afirmación, dirigida a un experto humano, logra un nivel específico de comprensión causal con eficacia, eficiencia y satisfacción en un contexto específico de uso.
+ % & Causability: Causability is the measurable extent to which an explanation of a statement to a human expert achieves a specified level of causal under- standing with effectiveness, efficiency, and satisfaction in a specified context of use. As causability is measured in terms of effectiveness, efficiency, and (human) satisfaction related to causal understanding and its transparency for an expert user, it refers to a human-understand- able model.
+ \\ \hline
+Reproducibilidad & Reproducibility
+ & Se refiere a la habilidad de repetir resultados anteriores usando los mismos medios que se usaron en el ensayo original: el mismo software, los mismos datos de entrada, etc. Se considera la reproducibilidad como un requisito para establecer la causalidad en la interpretación de resultados.
+ % Reproducibility refers to the ability to duplicate prior results using the same means as used in the original work, for example the same program code and raw data.
+ \\ \hline
+\end{tabular}
+\caption{Definiciones para la terminología frecuente en temas afines a sistemas IA y IAX.}
+\label{tabla:es/terminos_xai}
+\end{table}
+}

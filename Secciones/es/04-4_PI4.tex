@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   PI4 - ANÁLISIS DE RESULTADOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{PI4 - ¿Qué aportes se realizaron para la integración de IA/IAX al flujo de trabajo de los patólogos?} \label{section:es/resultados-pi4}
+
+% NPC = nasopharyngeal cancer
+Alabi et al. \cite{Alabi2023} concluyen que el aprendizaje automático es capaz de estimar el pronóstico de cáncer nasofaríngeo. Dado que estos algoritmos pueden examinar relaciones complejas entre variables, potencialmente pueden analizar cómo respondieron los pacientes a su tratamiento y predecir el resultado de un nuevo paciente en condiciones similares. Los autores sostienen que estos algoritmos, combinados con técnicas de explicabilidad, proporcionan un potencial prometedor para estratificar la probabilidad de supervivencia en pacientes con cáncer nasofaríngeo.
+
+Dy et al. \cite{Dy2024} convocaron a 90 patólogos especialistas con experiencia en puntuación del índice de proliferación (PI) del Ki-67, un marcador de proliferación que puede ser un factor de pronóstico en tumores neuroendocrinos \cite{defKi67}. Estos especialistas se seleccionaron sin hacer distinción de género, edad o situación laboral. Los autores evaluaron la concordancia de puntuación con y sin IA. Para llevar a cabo este estudio utilizaron UV-Net, una herramienta de aprendizaje profundo desarrollada por la Toronto Metropolitan University que es capaz de diferencia Ki-67 positivo o Ki-67 negativo en secciones de tejido teñidas con inmunohistoquímica. Observan que la mayoría de los convocados consideraron las sugerencias de esta herramienta, la encontraron apropiada y estuvieron de acuerdo en que puede mejorar la precisión en la evaluación de Ki-67. Varios de los encuestados coincidieron en que usarían esta herramienta en la práctica y se manifestaron de acuerdo con implementar asistencia por IA en evaluaciones de Ki-67 en la próxima década.
+
+Bouderhem et al. \cite{Bouderhem2024} advierten que para que los sistemas de IA puedan integrarse correctamente en la atención médica es preciso llevar a cabo una revolución digital, con campañas de concientización y programas educacionales que mitiguen el temor del personal médico de ser reemplazados, y que convenzan a los pacientes de que esta tecnología no les produciría daños. Los autores sostienen que esto es un proceso necesario para construir la confianza pública con los sistemas de inteligencia artificial.
+
+Por otro lado, los autores enumeran una serie de posibles soluciones para regular correctamente el uso de IA en medicina, a saber:
+
+\begin{itemize}
+  \item Establecer normas y estándares en el marco de la Organización Mundial de la Salud (OMS).
+  \item Fortalecer la supervisión regulatoria.
+  \item Promover responsabilidad y transparencia.
+  \item Fomentar la autorregulación de la industria.
+  \item Fomentar la cooperación internacional.
+  \item Fortalecer la ética del uso de datos personales del ámbito médico.
+  \item Establecer una \enquote{cultura de IA} que involucre a todas las partes interesadas del ámbito médico.
+\end{itemize}
+
+En términos de GNNs, si bien existen métricas y algoritmos para medir la eficiencia de una explicación, Finzel et al. \cite{Finzel2022} creen que las explicaciones verbales pueden aportar información sobre la toma de decisiones de una GNN de manera más humana y natural, y hacen fuerte énfasis en simular las expectativas de los usuarios. Comentan que eligieron este enfoque para permitir una entrada human-in-the-loop en un procedimiento post-hoc, en vez de requerir que las personas enmascaren el gráfico de entrada extraído de acuerdo con conceptos específicos del dominio.
+
+Mohammadi et al. \cite{Mohammadi2022} proponen un modelo interpretable basado en aprendizaje semi-supervisado, a partir de WSI, para diagnosticar cáncer de endometrio. Tras haberlo probado, consultaron con patólogos expertos y obtuvieron observaciones acerca de los mapas de saliencia y la visibilidad de características. Detectaron que los mapas de saliencia mostraban que la estructura epitelial es altamente prominente para la clase maligna, tanto en muestras benignas y malignas. Esto podría prestar confusión en muestras benignas.
+
+Teng et al. \cite{Teng2022} observan que es necesario que el personal médico participe del proceso de diseño de los modelos de IA, no solo para aportar conocimientos y experiencia, sino también para comprender cómo toma decisiones el sistema. Sostienen que este enfoque incrementa notoriamente la confianza de médicos y pacientes, y promueve la implementación de sistemas de diagnóstico asistido en la práctica médica.
+
+Sabol et al. \cite{Sabol2020} desarrollaron una interfaz que provee explicaciones visuales y semánticas extraídas de CFCMC (Cumulative Fuzzy Class Membership Criterion) al que llamaron X-CFCMC (explainable CFCMC), un modelo clasificador basado en lógica difusa. Para medir su desempeño y aceptación, diseñaron una interfaz de usuario que permite a los patólogos examinar partes arbitrarias del corte WSI haciendo clic en el área deseada. La interfaz muestra sus predicciones, y luego el patólogo puede tomar una decisión final seleccionando sendos botones en la pantalla. Sus hallazgos demuestran que los patólogos consideran X-CFCMC más preciso, más riguroso, completo y más confiable que una CNN convencional interpretable. Los autores creen que su sistema propuesto puede contribuir al uso de la IA, principalmente a mejorar la usabilidad y aceptación en la práctica médica.
+
+Cai et al. \cite{Cai2019} condujeron una entrevista semi-estructurada de tres fases con un total de 21 patólogos. En la primera fase, les preguntaron qué tipo de información necesitarían saber acerca de un asistente IA antes de utilizarlo. También se les pidió que describieran cómo se habían incorporado previamente a una tecnología existente o una prueba de diagnóstico en su práctica actual. En la segunda fase, los autores buscaron comprender estas necesidades mientras usaban un asistente IA. Finalmente, en la tercera fase se les preguntó qué información adicional consideraban necesaria conocer para trabajar con la IA de manera eficaz.
+
+Como resultado de la entrevista, algunos de los hallazgos de Cai et al. fueron:
+
+\begin{itemize}
+    \item Puede ser útil determinar qué tipos de métricas de rendimiento están acostumbrados a ver los usuarios, con el fin de que las partes interesadas y usuarios finales estén mejor preparados para comprender las medidas empíricas del rendimiento de un asistente IA.
+    \item El deseo más común de los entrevistados era conocer las limitaciones y fortalezas del sistema para tenerlas en cuenta durante la toma de decisiones. Varios patólogos asumieron que la IA tendría dificultades con los mismos casos especiales con los que ellos mismos luchan, aunque se dieron más crédito por considerarse capaces de manejar adecuadamente estos casos.
+    \item Los participantes manifestaron desear que el algoritmo tuviera estilos de diagnóstico similares a los suyos; que pueda ser, por ejemplo, más liberal o más conservador, al asignar grados de cáncer de mayor gravedad.
+    \item Dada la subjetividad inherente a la clasificación del cáncer, los participantes deseaban saber qué fuentes médicas utilizaba el algoritmo. Mientras que los patólogos suelen conocer la experiencia y los antecedentes de sus colegas, el conocimiento clínico de una IA es ciertamente opaco.
+    \item Algunos patólogos imaginaron ensamblar un conjunto de casos de verdad fundamental y comparar sus diagnósticos con los de la IA en una fase de calibración humano-IA.
+\end{itemize}
+
+Shawi et al. \cite{Shawi2022} encontraron que los médicos no confían en las predicciones de un modelo de caja negra, e incluso prefieren disponer de modelos de caja blanca, aunque tengan un rendimiento menor.
+
+Ayorinde et al. \cite{Ayorinde2022} plantean un paradigma colaborativo en el que los equipos de desarrollo mantengan un diálogo continuo y fluido con los médicos, con el propósito de difundir las ventajas y limitaciones de los diseños elegidos, conocer los problemas comunes de la IA respecto a las fases de entrenamiento y despliegue, y aumentar la confianza en estos sistemas.
+
+% digital scans -- lo traduje como muestras digitales
+Gu et al. \cite{Gu2023NaviPath} detectaron que a los patólogos les insume más tiempo examinar una muestra digital que a través de microscopios. La dificultad radica en la navegación de los cortes histológicos digitales porque tienen resoluciones extremadamente altas del orden de \((10^6)^2\) píxeles, mientras que los monitores de escritorio alcanzan \(8.3\times10^6\) píxeles si son 4K UHD. Para atender este problema, los autores consultaron con seis patólogos profesionales de dos centros médicos diferentes y con la información recolectada desarrollaron NaviPath: un sistema de navegación colaborativo humano-IA. Los autores, además, aseguran que este sistema cierra la brecha entre la IA y los patólogos porque integra conocimientos del dominio médico, lo cual puede mejorar la integración al flujo de trabajo cotidiano de los patólogos.
+
+Wenzel y Wiegand \cite{Wenzel&Wiegand2020} observaron que los patólogos prefieren procesos de toma de decisión que sean transparentes y manifiestan incomodidad con los métodos de caja negra. Wenzel y Wiegand advierten que, pese a los avances en técnicas IAX, se debe validar que la explicación es plausible y que sin un chequeo de validez el modelo en su totalidad no es confiable. Para llevar a cabo esta validación, sostienen que los expertos del dominio deben verificar que los objetivos del sistema sean relevantes en la práctica, además de la validación técnica convencional.
+
+Los hallazgos de Gallo et al. \cite{Gallo2023} sugieren que una red neuronal entrenada para detectar carcinoma de próstata en biopsias de núcleo, utiliza características morfológicas similares a las de los patólogos, con aumentos medianos (100x–200x) y bajos (20x–50x) en las muestras.
+
+Dolezal et al. \cite{Dolezal2024} observan que cuando sea crean herramientas analíticas de computación para uso clínico, es importante considerar que los usuarios finales podrían no disponer de conocimiento computacional suficiente. En este sentido, incorporar una interfaz de usuario (GUI) puede hacer el sistema más accesible y facilitar el despliegue de herramientas de aprendizaje profundo en el ámbito médico.
+
+Vanitha et al \cite{Vanitha2024} postulan que el uso de Grad-CAM como técnica de explicabilidad es un paso crucial para adoptar la inteligencia artificial en la práctica clínica. Sostienen que la visualización a través de mapas de calor permite a los médicos verificar visualmente el fundamento de las predicciones de las CNN y facilitan un entendimiento más profundo de su funcionamiento, así como también aumenta la confianza en el sistema. Tales explicaciones también tienen provecho en ámbitos educativos, donde los médicos profesionales pueden observar cómo los modelos disciernen matices sutiles en las imágenes histopatológicas que pueden pasarse por alto en otros exámenes.
+
+Dörrich et al. \cite{Doerrich2023} también argumentan a favor de las técnicas CAM, ya que encontraron que son útiles para estudiar y comparar el comportamiento entre dos redes neuronales. Comentan, además, que se ha demostrado que presentar Grad-CAM como información adicional junto con WSI puede mejorar la precisión de la clasificación de los patólogos.
+
+Otros autores también perciben los beneficios de utilizar Grad-CAM. Shovon et al. \cite{Shovon2023} utilizan Grad-CAM para explicar un modelo de clasificación de cáncer de mama, logrando así un sistema más transparente para los usuarios. Por su parte, Liang y Meng \cite{Liang&Meng2023} lo utilizan para aportar explicabilidad a Brea-Net, otra red de clasificación de cáncer de pecho, especializada para sets de datos desbalanceados. Por último, Praetorius et al. \cite{Praetorius2023} utilizan Grad-CAM en red IMFSegNet, red capaz de cuantificar la distribución espacial de grasa intramuscular en secciones histológicas, para dilucidar visualmente el proceso de toma de decisiones del modelo.
+
+Basaad et al. \cite{Basaad2024} proponen BERTGNN, un sistema que GNN con LLMs y es capaz de predecir cáncer de mama metástico. La combinación de ambas tecnologías permite procesar la semántica de reportes histopatológicos y descubrir patrones o dependencias cruciales para predecir esta enfermedad. Disponer de esta información, facilitaría a los patólogos a tomar decisiones y mejorar los resultados de los pacientes. Cabe destacar que los autores declaran que su aporte es solo el paso inicial y que es imperativo confirmar su eficacia y confiabilidad.
+
+Palkar et al. \cite{Palkar2024} sostienen que la interpretabilidad sirve como principio rector para la implementación de la inteligencia artificial en el ámbito sanitario, pese a que aún falta mucho por investigar de IAX en este campo. Siguiendo este lineamiento, los autores destacan que no solo refuerza la confianza, sino también alienta a los usuarios a valerse de los beneficios de esta tecnología y a permanecer atentos a sesgos potenciales y consideraciones éticas de su uso.
+
+Nasir et al. \cite{Nasir2024} presentan un nuevo marco de trabajo ético constituido por seis pilares: sensibilidad, evaluación, enfoque en el usuario, responsabilidad, beneficencia y seguridad. La incorporación de estos pilares sienta la base para sistemas de IA holísticos y seguros. Cada pilar, a su vez, se contextualiza dentro de un panorama ético de la IA. Este marco está diseñado para regular el impacto de estas tecnologías en la vida de las personas, garantizando el beneficio social, la protección de los derechos humanos y el respeto por la privacidad y la autonomía de las personas.
+
+Aziz et al. \cite{Aziz2023} presentan un modelo llamado IVNet (ImageNet-VGG16) para diagnóstico en tiempo real de cáncer de mama en entornos hospitalarios. Utilizando transferencia de aprendizaje, el modelo analiza imágenes histopatológicas e identifica las células afectadas. Los autores incorporan al sistema una interfaz de usuario para monitoreo en tiempo real, lo que permite a los médicos planificar el tratamiento y realizar pronósticos.
+
+Sloboda et al. \cite{Sloboda2024} proponen la arquitectura xAI-CycleGAN, la cual está basada en CycleGAN y que pretende mejorar la tasa de convergencia y la calidad de la imagen en tareas de transformación de imagen a imagen sin supervisión.
+
+Alsubai et al. \cite{Alsubai2024} presentan el modelo Inception-ResNetV2 que permite clasificar cáncer de colon y pulmón en muestras histopatológicas de cáncer. Los autores utilizan el método SHAP de explicabilidad, que ilustra el aporte individual de cada característica en las predicciones del modelo. De esta forma, aumentan la transparencia y fomentan una comprensión más profunda de los procesos de toma de decisiones del sistema.
+
+Civit-Masot et al. \cite{CivitMasot2024} proponen una red convolucional para clasificar muestras de cáncer cervical. Incorporan técnicas IAX que presentan un reporte detallado que ayuda al personal médico en tareas de diagnóstico, el cual incluye una representación gráfica de mapas de calor que muestra las zonas de la imagen que condicionaron el resultado del modelo y además un reporte en texto que ilustra el grado de certeza en la predicción provista por el sistema. Los autores sostienen que este generador de reportes es esencial para que los patólogos puedan aseverar la validez de los resultados del modelo.
+
+Ullah et al. \cite{Ullah2024} concluyen que es crucial que los desarrolladores de IA, los profesionales del área médica y los expertos del dominio colaboren entre sí para integrar exitosamente los algoritmos de LLM en las tareas de diagnóstico, ya sea participando en el ajuste de los conjuntos de datos, en los mecanismos de validación o ambos. Este esfuerzo conjunto puede mejorar el entrenamiento del modelo y asegurar que se alinee con el flujo de trabajo clínico actual.
+
+Finzel et al. \cite{Finzel2024} proponen un marco de trabajo bidireccional, en el que las personas reciben las explicaciones de una decisión de clasificación, aplicable a varios tipos de modelo. Estas explicaciones se manifiestan en forma unimodal o multimodal. El profesional, ya sea experto o novato, puede explorar y comprender el modelo, su clasificación para ejemplos puntuales y las explicaciones dadas en la interfaz, y ajustar o afinar al sistema. Los autores destacan que esta retroalimentación correctiva es benéfica para mejorar el desempeño del modelo en circuitos casos, pero advierten que también podría dañarlo si la decisión correctiva está sesgada, es incierta o contradice otras partes del modelo, necesarias para detectar otras subclases de muestras.
+
+Vanea et al. \cite{Vanea2024} presentan HAPPY (del inglés Histology Analysis Pipeline.PY), un método para cuantificar células y tejidos microanatómicos a través de cortes histológicos WSI de placenta teñidos con hematoxilina y eosina (H\&E), técnica de tinción ampliamente utilizada en muestras de núcleos celulares \cite{usoH&E}. Los autores sostienen que esta herramienta puede facilitar estudios morfo-métricos a gran escala sobre la histología de la placenta, una tarea que actualmente es manual y requiere mucha mano de obra experta.
+
+Pahud de Mortanges et al. \cite{PahuddeMortanges2024} proponen un orquestador IAX cuyo propósito es ayudar a los clínicos con la sinopsis multimodal y longitudinal de los datos, las predicciones de IA y la explicabilidad correspondiente. Aunque los autores no proporcionan una implementación completa del orquestador IAX, describen cómo podría lograrse a raíz de los desarrollos actuales LLM, y sugieren propiedades, funcionalidades y métricas deseables.
+
+Tabatabaei et al. \cite{Tabatabaei2023} comentan que CBMIR (del inglés Content-Based Medical Image Retrieval) favorece la confianza de los patólogos en los resultados de una predicción, ya que no solo tendrán a disposición una segunda opinión, sino también podrán buscar patrones en tejidos anteriores. Dada la naturaleza explicable de CBMIR, los médicos pueden comprender la forma en que el sistema arribó a un diagnóstico o recomendación determinados. Los autores destacan que, a diferencia de los modelos de clasificación habituales, CBMIR está centrado en el patólogo.
+
+Gu et al. \cite{Gu2021Lessons}, a través de sesiones de trabajo con ocho patólogos de un centro médico, consiguen reunir seis aprendizajes fundamentales para integrar la IA en la práctica clínica.
+
+\begin{itemize}
+    \item El sistema IA debe proporcionar junto con sus resultados detalles específicos del caso de estudio particular, para que el médico pueda evidenciar qué factores lo condujeron a elaborar dicho resultado.
+    \item Dado que el diagnóstico suele acarrear más de una tarea, el sistema IA necesita constantemente tomar en consideración la nueva información que pueda extraer de las entradas del usuario.
+    \item El tiempo de las tareas médicas suele ser crítico. Los beneficios potenciales de utilizar IA deben sopesarse junto a la cantidad de esfuerzo adicional que pueda demandar y la información proporcionada.
+    \item La IA debe ayudar al personal médico a limitarse a pequeñas regiones de un gran espacio de tareas, así como a filtrar información en regiones específicas.
+    \item En casos en que los médicos puedan proveer etiquetas durante su flujo de trabajo, el sistema IA debería proveer retroalimentación explícita de cómo mejora el modelo en consecuencia, puesto que motivaría al personal a realimentar más y mejor al sistema.
+    \item En tareas médicas de alto riesgo, la IA debe proporcionar información que permita validar su nivel de confianza.
+\end{itemize}
+
+A raíz de los aprendizajes adquiridos en \cite{Gu2021Lessons}, Gu et al. proponen xPath \cite{Gu2023XPath}, una herramienta de diagnóstico colaborativa humano-IA que pretende asistir a los patólogos e integrarse a su flujo de trabajo mediante tres características fundamentales:
+
+\begin{itemize}
+    \item Reporta sobre múltiples criterios patológicos calculados mediante IA.
+    \item Presenta evidencia trazable de cada reporte, volviendo al sistema más explicable y confiable.
+    \item Permite a los patólogos realizar diagnósticos en un flujo de trabajo similar al de su práctica diaria.
+\end{itemize}
+
+Tschandl et al. \cite{Tschandl2020} manifiestan que sus hallazgos sugieren riesgos indeseados. Observan que si un grupo de evaluadores logra la confianza necesaria para valerse de la asistencia de la IA, también son vulnerables a desempeñarse por debajo de su desempeño esperado ante fallas en la IA.
+
+Klauschen et al. \cite{Klauschen2024} argumentan que los sistemas IA/IAX pueden servir para asistir en la toma de decisiones de las personas, para construir un sistema autónomo de toma de decisión, o bien para extraer información científica. En el primer caso, los autores sostienen que incorporar soluciones basadas en redes neuronales, combinadas con mapas de atención o LRP, son la mejor opción para consultas en tiempo real. En el segundo caso, Klauschen et al. argumentan que dada la creciente escasez mundial de patólogos las herramientas de diagnóstico autónomo pueden ser un gran aporte a la comunidad, pero es complejo una aprobación regulatoria en este contexto. Además, esta clase de sistemas debe demostrar robustez y precisión excepcional.
+
+En el tercer caso, Klauschen et al. sostienen que las técnicas IAX proporcionan una extensión poderosa a la bioinformática tradicional. Dado que los modelos de IA pueden aprender relaciones complejas, no lineales, entre múltiples variables, pueden combinarse con IAX para elaborar hipótesis dirigidas por datos.
+
+Amato et al. \cite{Amato2024} proponen una metodología de computación granular para clasificar imágenes histopatológicas, que se basa en aprendizaje profundo y utiliza un mapa autoorganizado para generar una estructura granular con los datos de aprendizaje. Los autores creen que su propuesta mejora las técnicas existentes creando una cadena de procesamiento que puede visualizarse con facilidad, y sostienen que esto puede ayudar tanto a los usuarios como a los desarrolladores de sistemas.
+

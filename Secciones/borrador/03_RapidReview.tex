@@ -1,0 +1,171 @@
+%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%
+\section{Rapid Review research protocol} \label{section:en/protocolo}
+
+En esta sección se describe el protocolo de investigaciòn utilizado para la revisión rápida.
+Rapid Reviews (RR) are practice-oriented secondary studies, and their main goal is to provide evidence to support decision-making towards the solution, or at least attenuation, of issues practitioners face in practice \cite{wip}.
+
+Para la revisión rápida se tomó la metodología PRISMA como referencia. Se especifican a continuación la pregunta de investigación (PI) para el caso de estudio de este trabajo, los repositorios donde se realizó la búsqueda, las cadenas de búsqueda asociadas, los criterios de inclusión y exclusión y el proceso de selección utilizado.
+
+
+%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Research Question}
+
+The Research Question to be answered is the next one: ¿Cuáles son los factores principales que limitan la implementación de AI/XAI en histología, histopatología y patología anatómica? Considerar todos los impedimentos reportados hasta el momento permitirá reunir todos los requisitos conocidos y necesarios para implementar AI/xAI en histopatología.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Search Process and Search string}
+
+An automatic search in the ACM, IEEE Xplore and Scopus digital   libraries and platforms was conducted. The search was performed from January 2015 to June 2023.
+
+For the construction of the search string, the main terms “explainable artificial intelligence”, “histopathology”, "histology" and "anatomic pathology" were considered, including their alternative terms. The resulting search string is present in Figure \ref{figura:en/cadena_generica}.
+
+\begin{figure}[htbp]
+\centering
+\begin{tabular}{c}
+\begin{lstlisting}
+#FULL TEXT
+  "xai" OR
+  "explainable artificial intelligence" OR
+  "explainable ai" OR
+  "interpretable ai" OR
+  "interpretable artificial intelligence" OR
+  "white box" OR
+  "human ai"
+#AND
+#FULL TEXT
+  "histopathology" OR
+  "histopathological" OR
+  "histology" OR
+  "histological" OR
+  "anatomic pathology" OR
+  "anatomical pathology"
+\end{lstlisting}
+\end{tabular}
+\caption{Referral Search string defined for the research.}
+\label{figura:en/cadena_generica}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Inclusion and exclusion criteria}
+
+The inclusion and exclusion criteria used for the article selection process are presented in Table \ref{tabla:en/criterios_inc_exc}.
+
+\begin{table}[htbp]
+\caption{Inclusion and exclusion criteria details}
+\begin{center}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{| m{10em} | m{10em} |}
+\hline
+\textbf{Criterio de inclusión} & \textbf{Criterio de exclusión} \\
+\hline
+Artículos publicados en inglés. & Artículos que estén redactados en un idioma que no sea inglés. \\ 
+\hline
+Artículos publicados entre enero de 2015 y junio de 2023. & Artículos publicados antes de enero de 2015. \\
+\hline
+Artículos publicados en journals, conferences o congresos con revisión de pares. & Artículos que no tengan revisión de pares. \\
+\hline
+Artículos cuyo enfoque principal esté relacionado a las implementaciones de XAI en histología o histopatología. & Artículos no disponibles o incompletos. \\
+\hline
+& Artículos duplicados. \\
+\hline
+& Surveys, systematic reviews and other rapid reviews. \\
+\hline
+\end{tabular}}
+\label{tabla:en/criterios_inc_exc}
+\end{center}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Selection process}
+
+The study selection process consisted of ten steps, which were executed sequentially. Details about the process are descrypted in Table \ref{tabla:en/proceso_busqueda}. This process allowed the selection of the primary studies that were analyzed to answer the research question (RQ)
+formulated.
+
+\begin{table}[htbp]
+\caption{Selection process details}
+\begin{center}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{|m{2em}|m{20em}|}
+\hline
+\textbf{Step} & \textbf{Procedure} \\
+\hline
+{1} & {Recopilación de resultados de cadenas de búsqueda, ordenados por repositorio} \\
+\hline
+\textbf{2} & {Selección por idioma de publicación} \\
+\hline
+\textbf{3} & {Selección por tipo de publicación} \\
+\hline
+\textbf{4} & {Eliminación de resultados duplicados por repositorio} \\
+\hline
+\textbf{5} & {Selección por título} \\
+\hline
+\textbf{6} & {Agrupación de resultados parciales para cada repositorio} \\
+\hline
+\textbf{7} & {Eliminación de resultados duplicados entre repositorios} \\
+\hline
+\textbf{8} & {Selección por abstract} \\
+\hline
+\textbf{9} & {Selección por disponibilidad del material} \\
+\hline
+\textbf{10} & {Lectura completa y revisión} \\
+\hline
+\end{tabular}}
+\label{tabla:en/proceso_busqueda}
+\end{center}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Data Extraction process}
+
+This section presents the search performed in the digital libraries and platforms. The search string was applied in the libraries with some necessary adjustments depending on the particularities of each one. Figure \ref{figura:en/data_extraction} shows the articles search and selection process.
+
+\begin{figure}[htbp]
+\centerline{\includegraphics{Imágenes/wip.png}}
+\caption{Articles search and selection process details.}
+\label{figura:en/data_extraction}
+\end{figure}
+
+Of a total of 777 articles found, XX primary studies were analyzed. The list of the studies analyzed is presented in Table \ref{tabla:en/estudios_primarios}.
+
+\begin{table}[htbp]
+\caption{List of the primary studies analyzed}
+\begin{center}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{|m{2.5em}|m{20em}|}
+\hline
+\textbf{Id} & \textbf{Primary study} \\
+\hline
+{[PS1]} & {1-Journal-Explainable AI Healthcare} \\
+\hline
+{[PS2]} & {4-Ayorinde-AI Renal Histopathology} \\
+\hline
+{[PS3]} & {6-Tosun-xAI Anatomic Pathology} \\
+\hline
+{[PS4]} & {7-Jarrahi-Workflow pathologists-IA} \\
+\hline
+{[PS5]} & {10-Verma-Rethinking Role AI} \\
+\hline
+{[PS6]} & {14-Tran-Deep Learning Cancer} \\
+\hline
+{[PS7]} & {21-dos-Santos-Challenges anatomical pathology} \\
+\hline
+{[PS8]} & {29-Mohammadi-Interpretability endometrial diagnosis} \\
+\hline
+{[PS9]} & {30-Holzinger-AI Causability Explainability} \\
+\hline
+{[PS10]} & {23-Rösler-AI hematology oncology} \\
+\hline
+{[PS11]} & {24-Zehra-AI digital pathology} \\
+\hline
+\end{tabular}}
+\label{tabla:en/estudios_primarios}
+\end{center}
+\end{table}
+

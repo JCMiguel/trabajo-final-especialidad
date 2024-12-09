@@ -1,0 +1,34 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   INTRODUCCIÓN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducción} \label{section:es/introduccion}
+
+% Acá tengo que hablar del tema IAX, mencionar brevemente la problemática actual y plantear mis objetivos para este artículo. Es decir, mencionar que voy a hacer un mapeo y tal.
+% Esta secciòn es importante para indicar lo que va a contener el artículo, así que tengo que ser breve, pero sin ser redundante con lo que voy a comentar en la sección de estado del arte.
+
+% TODO: Revisar y redactar mejor esta introducción
+% Para redactar esta sección, puedo inspirarme un poco en estos artículos:
+% 6-Tosun-xAI Anatomic Pathology.pdf
+
+% TODO: este estado del arte debería arrancar primero con las nociones de AI y luego la aparición de xAI. TAmbién se pueden comentar los grandes conjuntos de AI que se usan en la actualidad y ejemplos de investigaciones donde se los utiliza.
+% xAI vs Interpretable Machine Learning
+
+% TODO: Tengo que hablar acá de los sinónimos que fui encontrando de IAX. Sirve como introducción también a la cadena de búsqueda.
+
+% TODO: Justificar por qué este tema es importante. Por ejemplo: ¿hay pocos diagnósticos? ¿Se tarda mucho en diagnosticar? ¿Se suelen hacer mal? ¿Cuesta especializarse en determinados temas patológicos? Todo eso es importante porque le da solidez al tema.
+
+% TODO: Acá se pueden comentar (objetivamente y citando fuentes) los beneficios de incorporar xAI en la pràctica médica. Tambièn se puede hacer un listado de controversias y principales dificultades (también citando fuentes)
+
+La inteligencia artificial (IA) es una tecnología que se ha desarrollado mucho en los últimos años. Con el advenimiento del aprendizaje profundo o deep learning, cada vez son más los estudios y aplicaciones de estos modelos en distintos dominios. La mayoría de los algoritmo de IA se basan en modelos de caja negra, lo que implica que no existe una trazabilidad clara de cómo se obtuvo un resultado u otro. En términos generales, puede decirse que cuanto más complejo es el modelo de IA, más difícil es interpretar sus resultados. Un claro ejemplo de esto son las redes neuronales, usadas con frecuencia en la actualidad. Por otro lado, en contraposición a los modelos de caja negra existen los de caja blanca, que pretenden garantizar un entendimiento claro y directo del proceso \cite{Ye2021}.
+
+%“While DL for medical imaging evolved from successful applications in computer vision, its use for sparse, tabular genomic data was less preva- lent, facing substantial competition from traditional bio- informatics tools. Another crucial point to consider is the human interpretability of histopathological images com- pared to genomic information. Te human eye can detect distinct patterns in histology, which form the basis for patient diagnosis, making it less abstract and more intui- tive than genomic data. As a refection of this, the feld of explainable AI is emerging, aiming to elucidate the black- box properties of DL models.”
+Se define a la histopatología como el estudio de las células y el tejido enfermos a través un microscopio \cite{defHistopatologia}. Pese a los avances técnicos de los modelos de IA, actualmente aplicarlos en histopatología como parte de sistemas diagnóstico asistidos por computadora (o en inglés, Computer-Aided Diagnosis, CAD) aún es difícil debido a los requisitos específicos que se deben satisfacer en el ámbito médico, entre los cuales la falta de transparencia del proceso es el principal obstáculo \cite{Abdelsamea2022}. Otros requisitos que se deben satisfacer son de índole técnico, social, e incluso legal en términos regulatorios. Para solventar estos inconvenientes se desarrollaron un conjunto de técnicas que se conocen como inteligencia artificial explicable (IAX) \cite{Unger2024}, cuyo enfoque teórico es muy diverso. Estas técnicas consisten en una colección de procesos y métodos que permiten a los usuarios comprender cómo un algoritmo de IA obtiene un resultado específico \cite{Giuste2023}.
+
+La Organización Mundial de la Salud estima que la cantidad de muertes por cáncer, proyectadas al año 2045, se incrementará un 73,6\% en promedio a nivel mundial \cite{OMSproy2045}. Por otro lado, la cantidad de patólogos al día de hoy no es muy alta en proporción a la población total \cite{OMSpatologosHoy}. Frente a esto, la implementación de IA podría contribuir a disminuir la carga excesiva de trabajo que afrontan los patólogos en la actualidad \cite{Liu2021}. No obstante, a pesar de que actualmente existen múltiples técnicas IAX, éstas no son suficientes aún para implementar modelos de IA en histopatología, dado que no existe aún un consenso claro en el área. Algunos investigadores sostienen que la forma de analizar el comportamiento de un algoritmo de IA no consiste en buscar explicaciones a sus predicciones, sino en determinar la presencia de sesgos al obtenerlas \cite{Ahmad2018}. Existe además el debate no resuelto acerca del uso de modelos IAX post-hoc (caja negra) frente a los ante-hoc. Las explicaciones obtenidas a partir de un modelo de caja negra no se corresponden con la forma real en que el modelo de IA predice sus resultados, hecho que genera escepticismo para incorporar estas tecnologías en escenarios donde la toma de decisiones es crítica \cite{Ahmad2018}. Por otro lado, los sistemas IA/IAX deben ser consistentes en sus resultados; es decir, debe ser posible reproducir o reconocer un resultado siempre de la misma forma.
+
+El presente trabajo es una extensión de la revisión rápida publicada en por Miguel et al. \cite{Miguel2024}. Con el propósito de brindar un panorama más amplio, se realizó una revisión sistemática de literatura completa con el objetivo de reunir todos los requisitos, obstáculos y aportes existentes hasta la fecha, relacionados la implementación de IA/IAX en histopatología.
+
+Este trabajo se estructura de la siguiente manera: 
+La sección \ref{section:es/contexto-preliminar} presenta conceptos teóricos y contexto preliminar acerca de las tecnologías de IA e IAX.
+La sección \ref{section:es/protocolo} describe el protocolo utilizado para el desarrollo de la revisión sistemática.
+En la sección \ref{section:es/resultados}, se analizan los resultados obtenidos y se brindan respuestas a las pregunta de investigación, directrices de la revisión sistemática. Finalmente, en la sección \ref{section:es/conclusiones} se presentan las conclusiones de este trabajo.

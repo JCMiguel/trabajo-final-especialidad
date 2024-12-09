@@ -1,0 +1,50 @@
+Notas sobre contexto IA
+
+
+Posibles temas para hablar:
+- Prueba de Turing
+(https://www.ontsi.es/sites/ontsi/files/2020-06/InteligenciaArtificialNuriaOliver.pdf)
+El mito y la ficción literaria respecto a la Inteligencia Artificial
+empezaron a materializarse a partir de los años cuarenta del siglo
+XX, con los primeros ordenadores.
+El genial matemático e informático inglés Alan Turing es
+considerado el padre de la Inteligencia Artificial. Habló de ella
+en el legendario artículo Computing Machinery and Intelligence,
+publicado en 1950. Es en este trabajo donde propone la famosa
+prueba de Turing, ilustrada en la Figura 1, para determinar si un
+sistema artificial es inteligente.
+El ejercicio consiste en que un humano (C en la figura), conocido
+como el interrogador, interacciona vía texto con un sistema al que
+puede hacer preguntas. Si el humano no logra discernir cuándo
+su interlocutor es una máquina (A en la figura), y cuándo otra
+persona (B en la figura), entonces el sistema supera la prueba de
+Turing: es inteligente.
+(wikipedia)
+"Se hizo presente poco después de la Segunda Guerra Mundial con el desarrollo de la «prueba de Turing», mientras que la locución fue acuñada en 1956 por el informático John McCarthy en la Conferencia de Dartmouth."
+
+- RAE:
+https://dle.rae.es/inteligencia#2DxmhCT
+inteligencia artificial
+1. f. Inform. Disciplina científica que se ocupa de crear programas informáticos que ejecutan operaciones comparables a las que realiza la mente humana, como el aprendizaje o el razonamiento lógico.
+
+- Google:
+https://cloud.google.com/learn/what-is-artificial-intelligence?hl=es-419
+La inteligencia artificial es un campo de la ciencia relacionado con la creación de computadoras y máquinas que pueden razonar, aprender y actuar de una manera que normalmente requeriría inteligencia humana o que involucra datos cuya escala excede lo que los humanos pueden analizar.
+
+La IA es un campo amplio que incluye muchas disciplinas, como la informática, el análisis y la estadística de datos, la ingeniería de hardware y software, la lingüística, la neurociencia y hasta la filosofía y la psicología.
+
+A nivel operativo para el uso empresarial, la IA es un conjunto de tecnologías que se basan principalmente en el aprendizaje automático y el aprendizaje profundo, que se usan para el análisis de datos, la generación de predicciones y previsiones, la categorización de objetos, el procesamiento de lenguaje natural, las recomendaciones, la recuperación inteligente de datos y mucho más.
+- 
+
+
+Tipos de IA
+
+Tipos de inteligencia artificial de acuerdo con Arend Hintze ???
+https://cloud.google.com/learn/what-is-artificial-intelligence?hl=es-419#types-of-artificial-intelligence
+
+(https://www.masterdatascienceucm.com/que-es-machine-learning/)
+El machine learning o Aprendizaje Automático, es una rama de la Inteligencia artificial (IA) que estudia como dotar a las máquinas de capacidad de aprendizaje, basándose en algoritmos capaces de identificar patrones en grandes bases de datos y aprender de ellos.  
+
+Es muy común que se confundan la terminología y el campo de aplicación de la Inteligencia Artificial, el Machine Learning y el Deep Learning.
+
+Aunque no vayamos a entrar en detalle, es importante entender que el aprendizaje profundo (Deep Learning) es parte del Machine Learning, así como este, es parte de la IA.

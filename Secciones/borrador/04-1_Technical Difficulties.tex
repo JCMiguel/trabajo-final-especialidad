@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dificultades técnicas}
+% Sesgos, disparidad entre los datasets, diferencias de formatos, diferencia entre equipos WSI, etc...
+
+En sistemas supervisados de AI es crítico contar con datasets cuyas muestras estén clasificadas adecuadamente por un experto para obtener predicciones consistentes. Sin embargo, varios autores declaran dificultades operativas respecto a la clasificación.
+
+Ayorinde et al. [PS2] analyze that a reliable categorization can be problematic for some elements of slide assessment, specially in determination of arteriosclerosis.
+
+Tran et al. [PS6] observan que esto también es limitante en oncología y añade que currently unclear how DL systems would deal with this inter- and intralaboratory variability. Destaca además que en muchos DL systems the predictions are simply the best guess with the highest probability. In critical circumstances, overconfident predictions, e.g. predicting cancer primary site with only 40\% certainty, can result in inaccurate diagnosis or cancer management decisions.
+
+Por su parte, Mohammadi et al [PS8] menciona que fully supervised learning for whole slide image–based diagnostic tasks in histopathology is problematic due to the requirement for costly and time-consuming manual annotation by experts, and propose use of weakly supervised learning methods in order to reduce costs at scale.
+En cuanto al procesamiento, Mohammadi et al. comentan que entrenar AI 
+models on gigapixel size WSIs es altamente costoso y que se suelen recurrir a patching approaches.
+
+Dos Santos et al. [PS7] comentan que la falta de diversidad en los datasets es otras de las dificultades que enfrenta el uso de AI systems. Añaden, además, que Datasets must be in some way linked to clinical patient data to allow the validation of external algorithms, in addition to morphological validations performed by pathologists.
+
+Un aspecto importante es la privacidad de datos de los pacientes. Sobre este punto, Rösler et al. [PS10] sostienen that data in medicine must be securely stored, transferred, and protected from unauthorized access.
+
+Por otro lado, Holzinger et al. [PS9] comentan que a menudo los datasets no son suficientemente grandes. Observan también que there is an inherent tension between ML performance (predictive accuracy) and explainability. Often the best-performing AI models are the least transparent, and the ones providing a clear explanation are less accurate.
+
+
+% OK 4-Ayorinde
+% reliable categorization can be problematic for some elements of slide assessment, and in particular the determination of arteriosclerosis poses a number of challenges.
+
+% 14-Tran
+% Data variability is a major challenge for applying DL to oncology. For example, in immunohistochemistry each lab may have different intensity of staining or have different qualities of staining. It is currently unclear how DL systems would deal with this inter- and intralaboratory variability.
+% One challenge of implementing DL into clinical practice is the need for large phenotypically characterised datasets that enable development and training of DL models with good generalisation performance.
+% Most DL applications covered in this review are point-estimate methods, i.e. the predictions are simply the best guess with the highest probability. In critical circumstances, overconfident predictions, e.g. predicting cancer primary site with only 40% certainty, can result in inaccurate diagnosis or cancer management decisions.
+
+% 21-dos santos
+% 1) Te lack of diverse, properly labeled and comprehensive image datasets consisting of diverse histological lesions;
+% 2) Datasets must be in some way linked to clinical patient data to allow the validation of external algorithms, in addition to morphological validations performed by pathologists;
+% 3) An appropriate defnition of histological lesions with acceptable levels of agreement among specialists does not yet exist for most renal diseases;
+% 4) Variations occurring in the pre-analytical stages of image production due to image processing and capture systems introduce inconsistencies;
+% 5) Inadequate representation of lesion characteristics in infrequent diseases causes imbalance in image datasets;
+
+% 29-Mohammadi
+% Fully supervised learning for whole slide image–based diagnostic tasks in histopathology is problematic due to the requirement for costly and time-consuming manual annotation by experts.
+% training deep-learning models on gigapixel size WSIs is prohibitively computationally expensive, and so patching approaches (in which the input image is divided into a series of small patches before training) are typically employed in this use case. Another constraint associated with machine learning on WSIs is the high cost of label acquisition – in order to perform supervised learning, many slides are necessary, and each slide requires time-consuming manual annotation by experts (in comparison with image classification or segmentation tasks on natural image data, which may be easily labeled by laymen). This cost can be prohibitive at scale, and so it is often necessary to use weakly supervised training methods, as we employ herein.
+
+% 30-Holzinger
+% In medical decision support we are confronted with uncertainty, with probabilistic, unknown, incomplete, imbalanced, heterogeneous, noisy, dirty, erroneous, inaccurate and missing data sets in arbitrarily high-dimensional spaces (Holzinger, Dehmer, & Jurisica, 2014), (Lee & Holzinger, 2016). Often we are simply lacking of large data sets (Holzinger, 2016).
+
+% 23-Rösler
+%It goes without saying that data in medicine must be securely stored, transferred, and protected from unauthorized access.This raises new issues in the age of artifcial intelligence.Under certain conditions, it is possible to extract raw datafrom an AI network that has been trained on medical dataand then published or sold for further use. In recent years,technological advancements such as diferential privacyand secure multi-party computation have attempted toaddress this problem by introducing noise into the raw dataof the training set or by privacy preserving computationalapproaches. However, in any case, it is critical that if possible, anonymized raw data are included from the start ofthe training process, and that, as is standard in medicine,an ethical approval and informed consent of the patient is available prior to the use and evaluation of patient-related data. (Seastedt et al. 2022)

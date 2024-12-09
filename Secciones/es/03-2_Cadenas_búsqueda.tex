@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   CADENAS DE BÚSQUEDA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Cadenas de búsqueda} \label{section:es/cadena_busqueda}
+
+En función de las diferencias existentes en los filtros de búsqueda de cada repositorio, se decidió confeccionar una cadena de búsqueda de amplio alcance y elaborar un proceso de selección minucioso con el fin de abarcar un mayor número de investigaciones. Se planteó como punto de partida la cadena de búsqueda genérica descripta en la Figura \ref{figura:es/cadena_generica}, la cual contempla varios nombres alternativos que pueden encontrarse para IAX y las disciplinas bajo estudio.
+
+\begin{figure}[thp] % the figure provides the caption
+\centering          % which should be centered
+\begin{tabular}{c}  % the tabular makes the listing as small as possible and centers it
+\begin{lstlisting}[label={figura:es/cadena_generica}]
+#FULL TEXT
+  "xai" OR
+  "explainable artificial intelligence" OR
+  "explainable ai" OR
+  "interpretable ai" OR
+  "interpretable artificial intelligence" OR
+  "white box" OR
+  "human ai"
+#AND
+#FULL TEXT
+  "histopathology" OR
+  "histopathological" OR
+  "histology" OR
+  "histological" OR
+  "anatomic pathology" OR
+  "anatomical pathology"
+\end{lstlisting}
+\end{tabular}
+\caption{Cadena de búsqueda genérica.}
+\end{figure}
+
+La búsqueda se llevó a cabo en los repositorios de IEEE, ACM Digital Library, PubMed y Springer. Debido a que presentan criterios de filtrado dispares, tuvo que ajustarse la cadena de búsqueda a cada uno de ellos para respetar la cadena de búsqueda genérica propuesta. Las cadenas resultantes se detallan en las Figuras \ref{figura:cadenas_ieee}, \ref{figura:cadenas_acm}, \ref{figura:cadenas_pubmed} y \ref{figura:cadenas_springer}.
+
+\begin{figure}[thp] % the figure provides the caption
+\centering          % which should be centered
+\begin{tabular}{c}  % the tabular makes the listing as small as possible and centers it
+\begin{lstlisting}
+("Full Text Only":"xai" OR
+"Full Text Only":"explainable artificial intelligence" OR
+"Full Text Only":"explainable ai" OR
+"Full Text Only":"interpretable ai" OR
+"Full Text Only":"interpretable artificial intelligence" OR
+"Full Text Only":"white box" OR
+"Full Text Only":"human ai" )
+AND ("Full Text Only":"histopathology" OR
+"Full Text Only":"histopathological" OR
+"Full Text Only":"histology" OR
+"Full Text Only":"histological" OR
+"Full Text Only":"anatomic pathology" OR
+"Full Text Only":"anatomical pathology")
+\end{lstlisting}
+\end{tabular}
+\caption{Cadena de búsqueda particular para IEEE.}
+\label{figura:cadenas_ieee}
+\end{figure}
+
+\begin{figure}[thp] % the figure provides the caption
+\centering          % which should be centered
+\begin{tabular}{c}  % the tabular makes the listing as small as possible and centers it
+\begin{lstlisting}
+[[Full Text: "xai"] OR [Full Text: "explainable artificial intelligence"] OR [Full Text: "explainable ai"] OR [Full Text: "interpretable ai"] OR [Full Text: "interpretable artificial intelligence"] OR [Full Text: "white box"] OR [Full Text: "human ai"]] AND [[Full Text: "histopathology"] OR [Full Text: "histopathological"] OR [Full Text: "histology"] OR [Full Text: "histological"] OR [Full Text: "anatomic pathology"] OR [Full Text: "anatomical pathology"]] AND [E-Publication Date: (01/01/2015 TO 07/31/2023)]
+\end{lstlisting}
+\end{tabular}
+\caption{Cadena de búsqueda particular para ACM Digital Library.}
+\label{figura:cadenas_acm}
+\end{figure}
+
+\begin{figure}[thp] % the figure provides the caption
+\centering          % which should be centered
+\begin{tabular}{c}  % the tabular makes the listing as small as possible and centers it
+\begin{lstlisting}
+(((((((("xai"[Text Word]) OR ("explainable artificial intelligence"[Text Word])) OR ("explainable ai"[Text Word])) OR ("interpretable ai"[Text Word])) OR ("interpretable artificial intelligence"[Text Word])) OR ("white box"[Text Word])) OR ("human-ai"[Text Word])) AND (((((("histopathology"[Text Word]) OR ("histopathological"[Text Word])) OR ("histology"[Text Word])) OR ("histological"[Text Word])) OR ("anatomic pathology"[Text Word]) OR ("anatomical pathology"[Text Word]))))
+\end{lstlisting}
+\end{tabular}
+\caption{Cadena de búsqueda particular para PubMed.}
+\label{figura:cadenas_pubmed}
+\end{figure}
+
+\begin{figure}[thp] % the figure provides the caption
+\centering          % which should be centered
+\begin{tabular}{c}  % the tabular makes the listing as small as possible and centers it
+\begin{lstlisting}
+(("xai" OR "explainable artificial intelligence" OR "explainable ai" OR "interpretable ai" OR "interpretable artificial intelligence" OR "white box" OR "human ai") AND ("histopathology" OR "histopathological" OR "histology" OR "histological" OR "anatomic pathology" OR "anatomical pathology"))
+\end{lstlisting}
+\end{tabular}
+\caption{Cadena de búsqueda particular para Springer.}
+\label{figura:cadenas_springer}
+\end{figure}

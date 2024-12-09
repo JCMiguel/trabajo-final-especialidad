@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   INTRODUCCIÓN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction} \label{section:introduccion}
+
+% Acá tengo que hablar del tema XAI, mencionar brevemente la problemática actual y plantear mis objetivos para este artículo. Es decir, mencionar que voy a hacer un mapeo y tal.
+% Esta secciòn es importante para indicar lo que va a contener el artículo, así que tengo que ser breve, pero sin ser redundante con lo que voy a comentar en la sección de estado del arte.
+
+% TODO: Revisar y redactar mejor esta introducción
+% Para redactar esta sección, puedo inspirarme un poco en estos artículos:
+% 6-Tosun-xAI Anatomic Pathology.pdf
+
+%Artificial Intelligence (AI) is object of several researches in the last years.
+
+% USOS DE ALTHOUGH y sinònimos
+% ALTHOUGH she says red is her favorite color, Eve always wears green
+% Eve always wears green ALTHOUGH she says read is her favorite color
+% She managed to make herself understood although/though/even though she didn’t know much English.
+% Although/Though/Even though she didn’t know much English, she managed to make herself understood.
+% She didn’t know much English. She managed to make herself understood, though.
+% Despite the fact that she didn’t know much English, she managed to make herself understood.
+% She managed to make herself understood despite the fact that she didn’t know much English.
+% In spite of the fact that she didn’t know much English, she managed to make herself understood.
+% She managed to make herself understood in spite of the fact that she didn’t know much English.
+
+%Although it has achieve multiples advantages, AI in medicine has still unresolved isssues and very few models have made their way into clinical practice \cite{wip10}
+
+%The End :)
+
+
+% TODO: este estado del arte debería arrancar primero con las nociones de AI y luego la aparición de xAI. TAmbién se pueden comentar los grandes conjuntos de AI que se usan en la actualidad y ejemplos de investigaciones donde se los utiliza.
+% xAI vs Interpretable Machine Learning
+
+% TODO: Tengo que hablar acá de los sinónimos que fui encontrando de XAI. Sirve como introducción también a la cadena de búsqueda.
+
+% TODO: Justificar por qué este tema es importante. Por ejemplo: ¿hay pocos diagnósticos? ¿Se tarda mucho en diagnosticar? ¿Se suelen hacer mal? ¿Cuesta especializarse en determinados temas patológicos? Todo eso es importante porque le da solidez al tema.
+
+% TODO: Acá se pueden comentar (objetivamente y citando fuentes) los beneficios de incorporar xAI en la pràctica médica. Tambièn se puede hacer un listado de controversias y principales dificultades (también citando fuentes)
+
+La inteligencia artificial (AI) es una tecnología que se ha desarrollado mucho en los últimos años. Con el advenimiento de Deep Learning (DL), cada vez son más los estudios y aplicaciones de estos modelos en distintas áreas. La mayoría de los algoritmo de AI se basan en modelos de caja negra, lo que implica que no existe una trazabilidad clara de cómo se obtuvo un resultado u otro. En términos generales, puede decirse que cuanto más complejo es el modelo de AI, más difícil es interpretar sus resultados. Esto se evidencia cuando se comparan algoritmos como árbol de decisiones y redes neuronales. Por otro lado, en contraposición a los modelos de caja negra existen los de caja blanca, que pretenden garantizar un entendimiento claro y directo del proceso \cite{wip}.
+
+% Although it has achieve multiples advantages, AI in medicine has still unresolved isssues and very few models have made their way into clinical practice \cite{wip10}
+Se ha demostrado que la implementación de modelos AI de caja negra provee buenos resultados en diversos campos de aplicación \cite{wip10}. Sin embargo, aplicarlos en histopatología como parte de sistemas Computer-Aided Diagnosis (CAD) aún es difícil debido a requisitos específicos de este ámbito que también se deben satisfacer, entre los cuales la falta de transparencia del proceso es el principal obstáculo. Para solucionar este inconveniente se elaboraron técnicas que se conocen como Inteligencia Articial Explicada (xAI) \cite{wip}, que incluyen modelos posthoc y antehoc \cite{wip}. Se trata de una colección de procesos y métodos que permiten a los usuarios comprender cómo un algoritmo de AI obtuvo cierto resultado. Por medio de técnicas xAI es posible obtener más evidencias cualitativas de las predicciones elaboradas por el algoritmo AI \cite{wip}.
+
+Actualmente la cantidad de patólogos no es muy alta en proporción a la población total y la cantidad de casos de cáncer a nivel mundial tiende a crecer año tras años \cite{wip}. Frente a esto, la implementación de inteligencia artificial podría contribuir a evitar sobrecarga de trabajo en los patólogos \cite{wip5}. No obstante, a pesar de que actualmente existen múltiples técnicas xAI, estas no son suficientes aún para implementar modelos de AI en histopatología. Esto en parte se debe a que no existe aún un consenso claro en el área. Algunos investigadores sostienen que la forma de analizar el comportamiento de un algoritmo de AI no consiste en buscar explicaciones a sus predicciones, sino en determinar la presencia de sesgos al obtenerlas \cite{wip}. Existe además el debate acerca del uso de modelos XAI post-hoc (caja negra) frente a los ante-hoc. Esto se debe a que las explicaciones obtenidas a partir de una caja negra no se corresponden con la forma real en que el modelo de AI predice sus resultados, aspecto que genera cierto escepticismo para incorporar estas tecnologías en escenarios donde la toma de decisiones es crítica \cite{wip}. Algunos autores también declaran que los médicos y clínicos buscan relacionarse con el sistema como si lo hicieran con un colega: consultar su punto de vista médica, cuáles son sus experiencias y debilidades, y cómo complementar sus habilidades \cite{wip}. Estas cuestiones permiten aseverar que la implementación de AI/xAI en histología está sujeta a cumplir requisitos interdisciplinarios, tanto técnicos como sociales, e incluso legales. 
+
+Con el propósito de brindar un panorama amplio, se elabora en este artículo una revisión rápida de literatura para reunir todos los requisitos y obstáculos actuales para la implementación de AI/xAI en histopatología.
+
+Este artículo se estructura de la siguiente manera: %La sección \ref{section:en/background} presenta algunos conceptos importantes que es preciso conocer acerca del tema.
+La sección \ref{section:en/protocolo} describe el protocolo de revisión rápida utilizado. En la sección \ref{section:en/resultados}, se analizan los resultados obtenidos y se brinda respuesta a la pregunta de investigación que dirige esta revisión. Finalmente, en la sección \ref{section:en/conclusiones} se presentan conclusiones.
+
+
+
+
+% Zehra It is important to understand that shortage of pathologists is already acute and the  number of new pathologists is showing a steady declining trend globally. When combined with increasing cancer volumes, this will pose a great diagnostic dilemma around the globe in general and in developing world in particular. So, adoption of digital techniques and artifi cial intelligence (AI) in the field of pathology is becoming inevitable for better patient care and management of disease [5].
+
+% 1-Journal-Explainable AI Healthcare.pdf
+% Explainability is considered one of the prerequisites [4] for deep medicine, where AI is meant “to provide composite, panoramic views of individuals’ medical data; to improve decision-making; to avoid errors such as misdiagnosis and unnecessary procedures; to help in the ordering and interpretation of appropriate tests, and to recommend treatment” [5].
+% FATE (Fairness, Accountability, Transparency, and Ethics) [10] principles in AI.

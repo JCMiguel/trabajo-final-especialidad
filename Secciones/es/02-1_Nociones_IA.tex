@@ -1,0 +1,37 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   NOCIONES DE INTELIGENCIA ARTIFICIAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Nociones de inteligencia artificial} \label{section:es/nociones-ia}
+
+%- Nociones de Inteligencia Artificial
+%	- Clasificaciones
+
+% TODO: este estado del arte debería arrancar primero con las nociones de AI y luego la aparición de xAI. TAmbién se pueden comentar los grandes conjuntos de AI que se usan en la actualidad y ejemplos de investigaciones donde se los utiliza.
+
+% "Red conceptual de conceptos importantes para el tema del artículo. La red muestra la integridad y unión entre todos los conceptos". Sugerencia de Pollo
+% TODO: Tengo que ver cómo hago esto...
+
+A lo largo de los años, definir la inteligencia artificial y trazar una línea que la diferencie de un algoritmo de procesamiento convencional fue una tarea compleja. Actualmente, la Real Academia Española define la inteligencia artificial como aquella \enquote{disciplina científica que se ocupa de crear programas informáticos que ejecutan operaciones comparables a las que realiza la mente humana, como el aprendizaje o el razonamiento lógico} \cite{defIA-RAE}. Por su parte, según la documentación de Google Cloud \enquote{la inteligencia artificial es un campo de la ciencia relacionado con la creación de computadoras y máquinas que pueden razonar, aprender y actuar de una manera que normalmente requeriría inteligencia humana o que involucra datos cuya escala excede lo que los humanos pueden analizar} \cite{defIA-Google}.
+
+Pese a su popularidad reciente, sus orígenes se remontan hace más de 70 años, cuando el matemático e informático Alan Turing, considerado hoy como el padre de la inteligencia artificial, habló de ella en un artículo titulado \enquote{Computing Machinery and Intelligence}, publicado en 1950. En su trabajo, Turing postuló un análisis acerca de si las máquinas pueden pensar y las ambigüedades que acarrea esta pregunta. Para solventar esta disyuntiva, propuso lo que denominó como \enquote{el juego de la imitación} en el que dos participantes, que son una persona y una máquina, responden las preguntas de un interrogador. Este último se ubica en una sala separada y su objetivo es identificar, mediante texto, quién está respondiendo: si la máquina o si la persona. Si el interrogador no es capaz de diferenciar entre ambos, entonces se concluye que la máquina es inteligente. A este experimento actualmente se lo conoce como \enquote{prueba de Turing}, aunque no es el nombre original acuñado por el autor \cite{Turing1950}.
+
+No obstante, el término \enquote{inteligencia artificial} fue acuñado por primera vez en el año 1956, por el informático John McCarthy en la Conferencia de Dartmouth. En dicha conferencia también se concibieron las siete cuestiones fundacionales de la IA, las cuales definieron los retos principales a abordar en el desarrollo de la inteligencia artificial, en términos de capacidad de procesamiento, lenguaje, capacidad de abstracción, eficiencia, entre otras \cite{NuriaOliver2020}.
+
+Existen múltiples propuestas acerca de los tipos de inteligencia artificial existentes. En forma simplificada, en relación con los algoritmos de aprendizaje automático es posible decir que la inteligencia artificial es un superconjunto que los contiene, según se observa en la Figura \ref{figura:es/tipos-ai-ml}. Sin embargo, la clasificación propuesta por Arend Hintze es más abarcativa. Según el autor, la inteligencia artificial se puede subdividir en cuatro clases:
+
+\begin{figure}[ht!]
+    \centerline{\includegraphics[width=\textwidth]{Imagenes/Conceptos-IA-ML-DL.png}}
+    \caption{Clasificación de alto nivel de inteligencia artificial en términos de algoritmos de aprendizaje automático \cite{tiposIA-ML-DL}.}
+    \label{figura:es/tipos-ai-ml}
+    \end{figure}
+
+\begin{itemize}
+    \item Tipo I - Máquinas reactivas: se trata de sistemas de IAs cuyo funcionamiento se limita a reaccionar a un estímulo y, por lo tanto, carece de memoria o de la capacidad de aprender datos nuevos. Se basan en reglas preprogramadas. El ejemplo más popular de este tipo de IA es Deep Blue, un sistema creado por IBM a finales de los años 90 para vencer al maestro ajedrecista Garry Kasparov \cite{tiposIA-Hintze}.
+    \item Tipo II - Memoria limitada: son aquellos sistemas de IA que son capaces de tomar decisiones en base a datos del pasado. Se considera que la gran mayoría de los algoritmos de IA modernos pertenecen a este grupo. Un ejemplo de esta clase de sistemas son los modelos de aprendizaje profundo \cite{defIA-Google}.
+    \item Tipo III - Teoría de la mente: las máquinas de este tipo son más avanzadas y no solo elaboran representaciones de su contexto, sino también sobre otros agentes o entidades de dicho contexto. Hinze destaca que en psicología esto se conoce como \enquote{teoría de la mente}, y se refiere a comprender que las personas, las criaturas y los objetos del mundo pueden tener pensamientos y/o emociones que condicionen su propio comportamiento \cite{tiposIA-Hintze}. Según Google, estas IAs aún son teóricas y están sujetas a investigación \cite{defIA-Google}.
+    \item Tipo IV - Autoconocimiento: Se trata de sistemas que son capaces, no solo de respetar la teoría de la mente, sino que también son autoconcientes de su propia existencia y tiene las capacidades intelectuales y emocionales de un ser humano. La IA con autoconciencia no existe en la actualidad \cite{defIA-Google} \cite{tiposIA-Hintze}.
+\end{itemize}
+
+Actualmente, la IA se está implementando en una gran variedad de campos y disciplinas, por ejemplo en estadística, ingeniería de hardware y software, lingüística, neurociencia, filosofía y psicología. También se utiliza ampliamente en el ámbito empresarial para generar predicciones a partir de un conjunto de datos, procesar lenguaje natural, elaborar recomendaciones, entre otros usos \cite{defIA-Google}. A lo largo de este trabajo, se profundizará en aplicaciones en medicina, específicamente en los campos de la histología y la histopatología.
+
+

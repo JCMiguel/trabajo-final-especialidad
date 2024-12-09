@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   TAXONOMÍA DE INTELIGENCIA ARTIFICIAL EXPLICABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Taxonomía de inteligencia artificial explicable} \label{section:es/taxonomía-xai}
+
+% Obtener contexto de los artículos que fui encontrando sobre Taxonomía de IAX
+
+% Fuentes:
+% - 106-4_Graziani_Taxonomy Interpretable AI
+% - 72-Ortigossa-xAI Theory Applications
+% - 60-Patrício-xDL Medical Image Survey
+% - 108-Yang-Human Centric xAI Survey
+
+La Real Academia Española define a la taxonomía como una \enquote{ciencia que trata de los principios, métodos y fines de la clasificación} \cite{defTaxonomiaRAE}. Contar con taxonomías es crucial para establecer los cimientos del estudio de una disciplina o tecnología, a la vez que permite administrar un lenguaje común entre profesionales. Patrício et al. proponen, como resultado de su revisión sistemática, una taxonomía de IAX, en la cual se la concibe desde múltiples perspectivas. La Figura \ref{figura:es/taxonomia_xai} muestra un diagrama adaptado y traducido del original propuesto por los autores. Se conciben cuatro formas de clasificar las técnicas de IAX: según su grado de reutilización, según el alcance de la explicación, según su origen y según la modalidad de la explicación. En esta sección se detallan cada una de estas cuatro concepciones y se brindan ejemplos.
+
+\begin{figure}[h]
+    \centering
+    \includesvg[inkscapelatex=false, width=\textwidth]{Imagenes/taxo-iax.svg}
+    \caption{Diagrama de taxonomía de IAX, adaptado del original propuesto en inglés por Patrício et al. \cite{Patricio2023}}
+    \label{figura:es/taxonomia_xai}
+\end{figure}
+
+
+\subsubsection{Clasificación según grado de reutilización} \label{section:es/taxonomía-xai/reutilizacion}
+
+Esta categoría se refiere a cuán aplicable es la técnica y su validez cuando se utiliza para explicar modelos de IA diferentes. Se distinguen en esta categoría dos grupos bien definidos:
+
+\begin{itemize}
+    \item Técnicas agnósticas del modelo: esta clase de métodos se pueden utilizar para explicar cualquier tipo de modelo de IA. Es decir, que no se limitan a una arquitectura ni topología específica. Ejemplos de estos son las técnicas LIME \cite{LIME2016} y el valor de SHAP \cite{SHAP2017}.
+    \item Técnicas específicas de un modelo: este tipo de métodos son de uso restringido para una arquitectura específica de modelo de IA, dado que necesitan poder acceder a datos intrínsecos de este, como por ejemplo parámetros internos de una red neuronal. Un ejemplo de esta clase son las técnicas CAM \cite{CAM2023}, dado que solo son aplicables a redes neuronales con capas convolucionales en su arquitectura.
+\end{itemize}
+
+%Según su reusabilidad 
+%Model-Agnostic versus Model-Specific. A distinguishing factor between interpretability approaches is their comprehensiveness regarding the models they can be applied to. Model-agnostic methods can be used to explain arbitrary models, not being limited to a specific model architecture. Conversely, model-specific methods are restricted to a specific model architecture, meaning that these methods require access to the model’s internal information.
+
+
+\subsubsection{Clasificación según alcance de la explicación} \label{section:es/taxonomía-xai/alcance}
+
+Esta clasificación se refiere al tipo de explicaciones provistas por el método IAX, es decir, qué tan abarcativo es el alcance de dicha explicación en relación a sus datos. Se distinguen dos grupos:
+
+\begin{itemize}
+    \item Técnicas de interpretabilidad global: son aquellas cuyas explicaciones presentan información del funcionamiento del modelo IA para todo el set de datos utilizado. Estos métodos permiten identificar qué patrones o características en los datos son las más influyentes en las predicciones del modelo, a la vez que revelan información acerca de cómo está aprendiendo el modelo. Un ejemplo de este tipo de técnicas es TCAV (Testing with Concept Activation Vectors) \cite{TCAV2018}.
+    \item Técnicas de interpretabilidad local: son aquellas que se especializan en explicar predicciones individuales para ciertos datos de entrada. Permiten explicar cómo el modelo alcanza un resultado particular para una entrada específica. Un ejemplo de este tipo de métodos es LIME \cite{LIME2016} .
+\end{itemize}
+
+%¿De qué diablos depende la explicabilidad local y global? -- Del alcance de la explicación en relación a los datos.
+
+%Según el alcance de la explicación
+%Global Interpretability versus Local Interpretability. The type of explanations provided by XAI methods can be broadly divided into global and local according to whether the explanations provide insights about the model functioning for the general data distribution or for a specific data sample, respectively. Global interpretability methods explain which patterns in the data, i.e., class features, contributed the most to the model’s prediction. These explanations can reveal critical reasoning about what the model is learning. On the other hand, local interpretability methods seek to explain why a model performs a specific prediction for a single input.
+%Local interpretability focuses on explaining individual predictions and helps show why the model reached a particular result. Global interpretability aims to understand the model's behavior across the entire dataset, showing its overall patterns and trends.
+
+%Local Ejemplos de estos son las técnicas LIME \cite{LIME2016} y el valor de SHAP \cite{SHAP2017}.
+
+
+\subsubsection{Clasificación según el origen de la explicación} \label{section:es/taxonomía-xai/naturaleza}
+
+Esta clasificación se refiere a la naturaleza de la explicación, en términos de si es obtenida directamente del modelo IA o si se construye como resultado de una interacción con este. Se diferencian dos tipos, que son:
+
+\begin{itemize}
+    \item Explicaciones post-hoc: son aquellas que se obtienen por fuera del modelo de IA que se intenta interpretar. Generalmente, los métodos post-hoc se basan generar perturbaciones en los datos de entrada al modelo, una caja negra ya entrenada, con el objetivo de comprender el aporte parcial de determinadas características en la predicción del modelo. Un ejemplo de este tipo de explicaciones son las obtenidas por medio de LIME \cite{LIME2016}.
+    \item Explicaciones intrínsecas: este tipo de explicaciones residen en la arquitectura interna del modelo. Es decir, que se obtienen a partir de modelos IA que son interpretables persé. A este tipo de explicaciones también se las conoce como ante-hoc \cite{Retzlaff2024}. Un ejemplo de este caso son los algoritmos de árboles de decisiones, los cuales son intrínsecamente interpretables.
+\end{itemize}
+
+% ¿Intrínseca es lo mismo que ante-hoc? Sí, y tengo una fuente que lo demuestra \cite{Retzlaff2024}.
+
+%Según naturaleza de la explicación
+%Post-hoc versus Intrinsic. This criterion distinguishes the methods with respect to whether the explanation mechanism lies in the internal architecture of the model (intrinsic) or if it is applied after the learning/development of the model (post-hoc). Post-hoc methods usually operate by per- turbing parts of the data so that they can understand the contribution of different features in the model prediction or by analytically determining the contribution of different features to the model prediction. On the other hand, intrinsic models, also known asin-model approaches orinherently in- terpretable models, are self-explainable since they are designed to produce human-understandable representations from the internal model features.
+
+% Extracto de Retzlaff
+%The main distinction which is central to this article is between post-hoc and ante-hoc xAI methods. They are distinguished based on whether a model is intrinsically explainable (ante-hoc), or whether explainability is achieved by xAI approaches that analyze the model after training (post-hoc) (Arrieta et al., 2020, Molnar, 2022).
+
+
+\subsubsection{Clasificación según modalidad de explicación} \label{section:es/taxonomía-xai/modalidad}
+
+%Modalidad de explicación. La modalidad de explicación se refiere al tipo de explicación que proporciona cada método de interpretación. Entre los métodos analizados, la explicación puede proporcionarse en forma de mapas de prominencia (Explicación por atribución de características), descripciones semánticas (Explicación por texto), ejemplos similares (Explicación por ejemplos) o utilizando conceptos de alto nivel (Explicación por conceptos)
+
+Esta categoría se refiere a la forma en que se presenta una explicación al modelo. Patrício et al. distinguen cuatro formas fundamentales de presentar esta información, que son:
+
+\begin{itemize}
+    \item Explicación por atribución de características: son aquellas que permiten identificar la influencia de una determinada característica en una predicción del modelo IA. Se pueden subdividir en dos tipos:
+    \begin{itemize}
+        \item Métodos basados en perturbación (Perturbation-based): se fundamentan en generar una perturbación a los datos de entrada para estudiar cómo se ve afectada la predicción resultante. Un ejemplo de este tipo es LIME.
+        \item Mapas de saliencia (Saliency maps): se basan en presentar mapas de calor en los que se representa la relevancia relativa de los píxeles de la imagen asociada a una predicción del modelo. Un ejemplo de esta clase es CAM \cite{CAM2023} y sus múltiples variantes.
+    \end{itemize}
+    \item Explicación por texto: se basan en descripciones semánticas para explicar las decisiones del modelo. Se pueden identificar dos posibles paradigmas:
+    \begin{itemize}
+        \item Descripción de imágenes (Image Captioning) con o sin explicaciones visuales añadidas: se refiere a la tarea de describir el contenido de una imagen en palabras. Esta operatoria es una combinación de conceptos de visión por computadora y procesamiento de lenguaje natural.
+        \item Atribución de conceptos: la finalidad de esta subclase es aprender conceptos definidos por humanos a partir de activaciones internas en una red neuronal convolucional. Un ejemplo de esto es TCAV \cite{TCAV2018}.
+    \end{itemize}
+    \item Explicación por ejemplos: consiste en explicar una predicción específica mostrando un conjunto de ejemplos con características similares. Se subdividen en tres clases:
+    \begin{itemize}
+        \item Razonamiento basado en casos: son métodos de explicación que tienen como objetivo buscar en una base de datos entradas visualmente similares a imagen dada. Un ejemplo de este tipo es CBIR \cite{CBIR2011}.
+        \item Explicaciones contrafácticas: Ejemplo de esta clase son las Counterfactual Generative Network (CGN) \cite{CGN2021} y las conditional Generative Adversarial Network (cGAN) \cite{cGAN2023}.
+        \item Prototipos: consiste en que el modelo aprenda de prototipos durante su fase de entrenamiento, con el propósito de conseguir modelos de interpretabilidad intrínseca. Un ejemplo de este método es la arquitectura ProtoPNet \cite{ProtoPNet2019}.
+    \end{itemize}
+    \item Explicación por conceptos: este tipo de técnicas incorporan conceptos especificados por personas como una fase intermedia, condicionando así las predicciones finales. Ejemplo de este tipo son los modelos CBM \cite{CBM2021}.
+\end{itemize}
+
+%Según modalidad de la explicación
+%Explanation Modality. Explanation modality refers to the type of explanation provided by each interpretability method. Among the reviewed methods, the explanation can be provided in the form of saliency maps (Explanation by Feature Attribution), semantic descriptions (Explanation by Text), similar examples (Explanation by Examples), or using high-level concepts (Explanation by Concepts). In Section 5, we used this categorization to discuss the reviewed methods.
+
+
+
+
+% Extracto de Ortigossa
+%3) ACCORDING TO THE EXPLANATION TASK Some XAI methods are designed to understand learning models’ structures and internal mechanisms, i.e., model explanation methods. Such a category of methods is typically found in Neural Network applications, in which information visualization is applied to generate visual representations of the internal patterns of neural units. However, contrarily to intuition, Poursabzi-Sangdeh et al. [108] indicated exposing the internal mechanisms of a learning model reduces the users’ ability to detect faulty behaviors for unusual instances. Amann et al. [16] claimed such an interpretability reduction might be related to the overhead induced by the large amount of information users are exposed to during the understanding process, even in transparent models. Note the findings of Poursabzi-Sangdeh et al. [108] do not invalidate model explanation methods, but rather alert developers to design tools that synthesize large amounts of information carefully. Model inspection is used when the explanation task is to verify the model’s sensitivity, i.e., the behavior of the learning algorithm or its predictions when the input data are varied through perturbations. On the other hand, prediction explanation methods display visual or textual elements that provide a qualitative/quantitative understanding of the relationship between the input variables and a prediction for clarifying the factors that influence the model’s final decision. According to Ribeiro et al. [97], prediction explanation methods promote trust between users and learning applications faithfully and intelligibly. The explanation of predictions does not require all the classifier’s internal logic to be unraveled. Moreover, such methods should explain individual predictions of a complex model, regardless of whether it is correct or not. Prediction explanation is one of the leading research areas in XAI, with multiple techniques devoted to identifying and quantifying the contribution of input elements to predictions of complex models [4], [33]. Explanations can be provided by a global method or a local attribution one that assigns some measure of importance to each input datum in both granularity, i.e., for a collection of instances or a set of input attributes of a specific data instance. Finally, the output of a learning model can be interpreted through evidence-based (or factual) explanations. In this context, contrastive and counterfactual methods seek justifications for why a decision was not different from that one predicted and how it can be modified, respectively [122].

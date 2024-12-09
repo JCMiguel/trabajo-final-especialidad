@@ -1,0 +1,17 @@
+%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Technical difficulties}
+% Sesgos, disparidad entre los datasets, diferencias de formatos, diferencia entre equipos WSI, etc...
+
+In supervised AI systems, it is crucial to rely on datasets whose samples are classified by an expert with the intention of obtaining consistent predictions. However, many authors declare there are operative difficulties when classifying.
+
+Ayorinde et al. \cite{Ayorinde2022} analyze that a reliable categorization can be problematic for some elements of slide assessment, especially in determination of arteriosclerosis. Arteriosclerosis is recognized by the narrowing of the blood vessel lumen, although this is not always the case: an apparently narrow lumen may arise not only from disease but also from oblique sectioning. Thus, when processing blood vessel slides, the similarity between them becomes a critical issue for AI implementation due to the possibility of arriving at an erroneous diagnosis. 
+
+Tran et al. \cite{Tran2021} remark that this is also limiting in oncology, and that it is currently unclear how DL systems would deal with this inter- and intra-laboratory variability. They also add that, in many DL systems, the predictions are simply the best guess with the highest probability. In critical circumstances, overconfident predictions, e.g. predicting cancer primary site with only 40\% certainty, can result in inaccurate diagnosis or cancer management decisions.
+
+Along these lines, Mohammadi et al. \cite{Mohammadi2022}, mention that a fully supervised learning for whole slide image–based diagnostic tasks in histopathology is problematic due to the requirement for costly and time-consuming manual annotation by experts, and propose the use of weakly supervised learning methods in order to reduce costs at scale. When it comes to processing, Mohammadi et al. comment that training AI models on gigapixel size whole-slide images is highly expensive and that they usually resort to patching approaches.
+
+Dos-Santos et al. \cite{dosSantos2022} state that the lack of diversity in datasets is another difficulty that AI systems face. Moreover, the datasets must be in some way linked to clinical patient data to allow the validation of external algorithms, in addition to morphological validations performed by pathologists.
+
+An important aspect to consider is the data privacy of the patients. On this, Rösler et al. \cite{Roesler2023} say that data in medicine must be securely stored, transferred, and protected from unauthorized access.
+
+On the other hand, Holzinger et al. \cite{Holzinger2019}, reflect on the fact that oftentimes the datasets are not “big” enough. They observe that there is an inherent tension between ML performance (predictive accuracy) and explainability. Often the best-performing AI models are the least transparent, and the ones providing a clear explanation are less accurate.
